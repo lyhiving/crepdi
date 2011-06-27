@@ -1,0 +1,1874 @@
+<!DOCTYPE HTML>
+<html class="js flexbox canvas canvastext no-webgl no-touch geolocation postmessage no-websqldatabase no-indexeddb hashchange no-history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity no-cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d no-csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg no-inlinesvg no-smil svgclippaths firefox firefox3.6" lang="en"><head> <!--[if lt IE 7 ]><html
+class="no-js ie6" lang="en"> <![endif]--> <!--[if IE 7 ]><html
+class="no-js ie7" lang="en"> <![endif]--> <!--[if IE 8 ]><html
+class="no-js ie8" lang="en"> <![endif]--> <!--[if (gte IE 9)|!(IE)]><!--> <!--<![endif]--><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="copyright" content="Copyright David Walsh, 2007 - 2011"><title>MooTools ContextMenu Plugin</title><meta name="description" content=""><meta name="author" content="David Walsh"><meta name="publisher" content="David Walsh"><meta name="robots" content="index, follow"><link rel="start" href="http://davidwalsh.name/" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞."><link rel="alternate" type="application/atom+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. Atom Feed" href="http://davidwalsh.name/feed/atom"><link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 2.0 Feed" href="http://davidwalsh.name/feed"><link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. Comments RSS 2.0 Feed" href="http://davidwalsh.name/comments/feed"><link rel="alternate" type="application/rdf+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 1.0" href="http://davidwalsh.name/feed/rdf"><link rel="alternate" type="text/xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. RSS 0.92 Feed" href="http://davidwalsh.name/feed/rss"><link rel="pingback" href="http://davidwalsh.name/xmlrpc.php"><link rel="shortcut icon" href="http://davidwalsh.name/favicon.ico"><link rel="apple-touch-icon" href="http://davidwalsh.name/apple-touch-icon.png"><link rel="search" type="application/opensearchdescription+xml" href="http://davidwalsh.name/opensearch.xml" title="David Walsh Blog Search"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="shortcut icon" href="http://davidwalsh.name/favicon.ico"><link rel="apple-touch-icon" href="http://davidwalsh.name/apple-touch-icon.png"><link rel="stylesheet" href="mootools-context-menu_files/style.css"> <script src="mootools-context-menu_files/ga.js" async=""></script><script src="mootools-context-menu_files/modernizr-1.js"></script> <link rel="alternate" type="application/rss+xml" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞. » MooTools ContextMenu&nbsp;Plugin Comments Feed" href="http://davidwalsh.name/mootools-context-menu/feed"> <script type="text/javascript" src="mootools-context-menu_files/l10n.js"></script> <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://davidwalsh.name/xmlrpc.php?rsd"><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://davidwalsh.name/wp-includes/wlwmanifest.xml"><link rel="index" title="David Walsh :: Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞." href="http://davidwalsh.name/"><link rel="start" title="The Need To&nbsp;Blog" href="http://davidwalsh.name/the-need-to-blog"><link rel="prev" title="Implementing jQuery-Like Event Syntax in&nbsp;MooTools" href="http://davidwalsh.name/implement-jquery-mootools-event"><link rel="next" title="Animated AJAX Record Deletion Using&nbsp;MooTools" href="http://davidwalsh.name/animated-ajax-record-deletion-mootools"><meta name="generator" content="WordPress 3.1.1"><link rel="shortlink" href="http://davidwalsh.name/?p=966"><meta name="description" content="ContextMenu is a highly customizable, compact context menu script based on the CSS, XHTML, and the MooTools javascript framework. ContextMenu allows you to offer stylish, functional context menus on your website."><meta name="keywords" content="css,markup,mootools"><link rel="canonical" href="http://davidwalsh.name/mootools-context-menu"><style type="text/css" media="screen">.ckrating_highly_rated{background-color:#FFC !important}.ckrating_poorly_rated{opacity:0.6;filter:alpha(opacity=60) !important}.ckrating_hotly_debated{background-color:#FFF0F5 !important}</style><script src="mootools-context-menu_files/script.js" data-requiremodule="http://davidwalsh.name/wp-content/themes/klass/js/script.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="mootools-context-menu_files/Flame_002.css"><script src="mootools-context-menu_files/All.js" data-requiremodule="/wp-content/themes/klass/js/lighterjs/Source/All.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="mootools-context-menu_files/ZeroClipboard.js" data-requiremodule="/wp-content/themes/klass/js/lighterjs/assets/ZeroClipboard.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="mootools-context-menu_files/moostarrating.js" data-requiremodule="/wp-content/themes/klass/js/ratings/Source/moostarrating.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><link href="mootools-context-menu_files/Flame.css" media="screen" type="text/css" rel="stylesheet"><script src="mootools-context-menu_files/bsa.js" async="" type="text/javascript"></script><script src="mootools-context-menu_files/ck-karma.js" data-requiremodule="/wp-content/plugins/comment-rating/ck-karma.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script async="async" src="mootools-context-menu_files/s_db3b221ddd8cbba67739ae3837520ffe.js" id="_bsap_js_db3b221ddd8cbba67739ae3837520ffe" type="text/javascript"></script><style id="bsa_css" type="text/css">div.bsap_1236348{width:100%;display:block}div.bsap_1236348 a{width:125px}div.bsap_1236348 a img{padding:0}div.bsap_1236348 a em{font-style:normal}div.bsap_1236348 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 2px 2px 2px;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1236348 img{border:0;clear:right;}div.bsap_1236348 a.adhere{color:#666;font-weight:bold;font-size:12px;border:0px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1236348 a.adhere:hover{border:0px solid #999;background:#ddd;color:#333;}div.bsap_1236348 a{line-height:100%}div.bsap_1236348 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1236348 a.adhere{width:123px;height:123px}div.bsap_1236348 img.s{height:0;width:0}div.bsap_1242453{width:100%;display:block}div.bsap_1242453 a{width:390px}div.bsap_1242453 a img{padding:0}div.bsap_1242453 a em{font-style:normal}div.bsap_1242453 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0 4px 10px 0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1242453 img{border:0;clear:right;}div.bsap_1242453 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1242453 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1242453 a{line-height:100%}div.bsap_1242453 a.adhere{width:390px;height:75px;line-height:600%}html>body div.bsap_1242453 a.adhere{width:388px;height:73px}div.bsap_1242453 img.s{height:0;width:0}div.bsap_1255973{width:100%;display:block}div.bsap_1255973 a{width:200px}div.bsap_1255973 a img{padding:0}div.bsap_1255973 a em{font-style:normal}div.bsap_1255973 a{ra;float:left;}div.bsap_1255973 img{}div.bsap_1255973 a.adhere{}div.bsap_1255973 a.adhere:hover{}div.bsap_1255973 a{line-height:100%}div.bsap_1255973 a.adhere{width:200px;height:125px;line-height:1000%}html>body div.bsap_1255973 a.adhere{width:198px;height:123px}div.bsap_1255973 img.s{height:0;width:0}</style></head><body> <a name="top" id="top"></a><div id="container"> <header><div id="header1"><div class="center"> <a href="http://davidwalsh.name/" id="topLogo">David Walsh Blog</a> <a href="http://davidwalsh.name/" id="topName">david walsh blog</a> <span id="topTagline">MooTools Dev, JavaScript FanBoy, CSS Experimenter, and Safari Advocate</span><div id="header1buttons"> <a href="http://davidwalsh.name/about-david-walsh"><span>About Me</span></a> <a href="http://davidwalsh.name/contact"><span>Contact</span></a> <a href="http://davidwalsh.name/demos"><span>Demos &amp; Downloads</span></a></div><div id="headerSearch"><form action="http://google.com/search" id="searchForm"> <input name="sitesearch" value="davidwalsh.name" type="hidden"> <input style="display: block;" id="searchBox" name="q" results="5" placeholder="Search..." autocomplete="on" type="search"> <input id="searchSubmit" value="Search" type="submit"></form></div></div></div> </header><div id="main" role="main" class="center"><div id="homeContentLeft">
+	
+	<!-- left side post content -->
+	<div id="postContent"><article>
+		<!-- post content -->
+		<h1>MooTools ContextMenu&nbsp;Plugin</h1>
+		<div style="visibility: visible; opacity: 1;" id="promo"><span style="display: inline-block; float: left;"><iframe title="Twitter For Websites: Tweet Button" style="width: 110px; height: 20px;" src="mootools-context-menu_files/tweet_button.html" allowtransparency="true" tabindex="0" class="twitter-share-button twitter-count-horizontal" frameborder="0" scrolling="no"></iframe><script async="true" src="mootools-context-menu_files/widgets.js"></script></span><span style="display: inline-block; float: left;"><iframe style="border: medium none; overflow: hidden; width: 500px;" allowtransparency="true" src="mootools-context-menu_files/like.html" frameborder="0" scrolling="no"></iframe></span><br class="clear"></div>
+		<a href="http://davidwalsh.name/dw-content/moo-context-menu.php"><img src="mootools-context-menu_files/dw-context.jpg" alt="dwContext: MooTools Context Menu" class="image"></a>
+<p>ContextMenu is a highly customizable, compact context menu script 
+written with CSS, XHTML, and the MooTools JavaScript framework.  
+ContextMenu allows you to offer stylish, functional context menus on 
+your website.
+</p>
+
+<div class="actions">
+<a href="http://davidwalsh.name/dw-content/moo-context-menu.php" class="demo">View Demo</a>
+<a href="http://davidwalsh.name/dw-content/ContextMenu.js" class="download">Download</a>
+<div class="clear"></div>
+</div>
+
+<h2>The XHTML Menu</h2>
+
+<pre style="display: none;" class="html">&lt;ul id="contextmenu"&gt;
+	&lt;li&gt;&lt;a href="#edit" class="edit"&gt;Edit&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="separator"&gt;&lt;a href="#cut" class="cut"&gt;Cut&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#copy" class="copy"&gt;Copy&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#paste" class="paste"&gt;Paste&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#delete" class="delete"&gt;Delete&lt;/a&gt;&lt;/li&gt;
+	&lt;li class="separator"&gt;&lt;a href="#quit" class="quit"&gt;Quit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre><pre class="standardLighter twilightLighter"><a class="codeCopy" href="javascript:;">copy</a><span class="kw1">&lt;ul</span> <span class="kw2">id</span><span class="kw1">=</span><span class="kw3">"contextmenu"</span><span class="kw1">&gt;</span>
+  <span class="kw1">&lt;li</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#edit"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"edit"</span><span class="kw1">&gt;</span>Edit<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+  <span class="kw1">&lt;li</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"separator"</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#cut"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"cut"</span><span class="kw1">&gt;</span>Cut<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+  <span class="kw1">&lt;li</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#copy"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"copy"</span><span class="kw1">&gt;</span>Copy<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+  <span class="kw1">&lt;li</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#paste"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"paste"</span><span class="kw1">&gt;</span>Paste<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+  <span class="kw1">&lt;li</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#delete"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"delete"</span><span class="kw1">&gt;</span>Delete<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+  <span class="kw1">&lt;li</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"separator"</span><span class="kw1">&gt;</span><span class="kw1">&lt;a</span> <span class="kw2">href</span><span class="kw1">=</span><span class="kw3">"#quit"</span> <span class="kw2">class</span><span class="kw1">=</span><span class="kw3">"quit"</span><span class="kw1">&gt;</span>Quit<span class="kw1">&lt;/a&gt;</span><span class="kw1">&lt;/li&gt;</span>
+<span class="kw1">&lt;/ul&gt;</span></pre>
+
+<p>Use a list of menu items with one link per item.  The <span class="param">href</span> attribute is especially important as it must be named the same as the menu's <span class="param">action</span>, which you'll see below.</p>
+
+<h2>The Sample CSS</h2>
+
+<pre style="display: none;" class="css">/* context menu specific */
+#contextmenu	{ border:1px solid #999; padding:0; background:#eee; width:200px; list-style-type:none; display:none; }
+#contextmenu .separator	{ border-top:1px solid #999; }
+#contextmenu li	{ margin:0; padding:0; }
+#contextmenu li a { display:block; padding:5px 10px 5px 35px; width:155px; font-size:12px; text-decoration:none; font-family:tahoma,arial,sans-serif; color:#000; background-position:8px 8px; background-repeat:no-repeat; }
+#contextmenu li a:hover	{ background-color:#ddd; }
+#contextmenu li a.disabled { color:#ccc; font-style:italic; }
+#contextmenu li a.disabled:hover { background-color:#eee; }
+
+/* context menu items */
+#contextmenu li a.edit	{ background-image:url(edit.png); }
+#contextmenu li a.cut	{ background-image:url(cut.png); }
+#contextmenu li a.copy	{ background-image:url(copy.png); }
+#contextmenu li a.paste	{ background-image:url(paste.png); }
+#contextmenu li a.delete	{ background-image:url(delete.png); }
+#contextmenu li a.quit	{ background-image:url(quit.png); }
+</pre><pre class="standardLighter twilightLighter"><a class="codeCopy" href="javascript:;">copy</a><span class="co1">/* context menu specific */</span>
+<span class="se0">#contextmenu  </span>{ <span class="kw1">border</span>:<span class="nu0">1px</span> <span class="kw3">solid</span> <span class="kw3">#999</span>; <span class="kw1">padding</span>:<span class="nu0">0</span>; <span class="kw1">background</span>:<span class="kw3">#eee</span>; <span class="kw1">width</span>:<span class="nu0">200px</span>; <span class="kw1">list-style-type</span>:<span class="kw3">none</span>; <span class="kw1">display</span>:<span class="kw3">none</span>; }
+<span class="se0">#contextmenu .separator  </span>{ <span class="kw1">border-top</span>:<span class="nu0">1px</span> <span class="kw3">solid</span> <span class="kw3">#999</span>; }
+<span class="se0">#contextmenu li  </span>{ <span class="kw1">margin</span>:<span class="nu0">0</span>; <span class="kw1">padding</span>:<span class="nu0">0</span>; }
+<span class="se0">#contextmenu li a </span>{ <span class="kw1">display</span>:<span class="kw3">block</span>; <span class="kw1">padding</span>:<span class="nu0">5px</span> <span class="nu0">10px</span> <span class="nu0">5px</span> <span class="nu0">35px</span>; <span class="kw1">width</span>:<span class="nu0">155px</span>; <span class="kw1">font-size</span>:<span class="nu0">12px</span>; <span class="kw1">text-decoration</span>:<span class="kw3">none</span>; <span class="kw1">font-family</span>:tahoma,arial,sans-serif; <span class="kw1">color</span>:<span class="kw3">#000</span>; <span class="kw1">background-position</span>:<span class="nu0">8px</span> <span class="nu0">8px</span>; <span class="kw1">background-repeat</span>:<span class="kw3">no-repeat</span>; }
+<span class="se0">#contextmenu li a:hover  </span>{ <span class="kw1">background-color</span>:<span class="kw3">#ddd</span>; }
+<span class="se0">#contextmenu li a.disabled </span>{ <span class="kw1">color</span>:<span class="kw3">#ccc</span>; <span class="kw1">font-style</span>:<span class="kw3">italic</span>; }
+<span class="se0">#contextmenu li a.disabled:hover </span>{ <span class="kw1">background-color</span>:<span class="kw3">#eee</span>; }
+
+<span class="co1">/* context menu items */</span>
+<span class="se0">#contextmenu li a.edit  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(edit.png)</span>; }
+<span class="se0">#contextmenu li a.cut  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(cut.png)</span>; }
+<span class="se0">#contextmenu li a.copy  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(copy.png)</span>; }
+<span class="se0">#contextmenu li a.paste  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(paste.png)</span>; }
+<span class="se0">#contextmenu li a.delete  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(delete.png)</span>; }
+<span class="se0">#contextmenu li a.quit  </span>{ <span class="kw1">background-image</span>:<span class="kw4">url(quit.png)</span>; }</pre>
+
+<p>Make the CSS look however you'd like.  For the purposes of IE6, 
+however, you'll want to set the link widths.  Also note that the menu 
+should be initialized as "display:none".</p>
+
+<h2>The MooTools JavaScript</h2>
+
+<pre style="display: none;" class="js">var ContextMenu = new Class({
+
+	//implements
+	Implements: [Options,Events],
+
+	//options
+	options: {
+		actions: {},
+		menu: 'contextmenu',
+		stopEvent: true,
+		targets: 'body',
+		trigger: 'contextmenu',
+		offsets: { x:0, y:0 },
+		onShow: $empty,
+		onHide: $empty,
+		onClick: $empty,
+		fadeSpeed: 200
+	},
+	
+	//initialization
+	initialize: function(options) {
+		//set options
+		this.setOptions(options)
+		
+		//option diffs menu
+		this.menu = $(this.options.menu);
+		this.targets = $$(this.options.targets);
+		
+		//fx
+		this.fx = new Fx.Tween(this.menu, { property: 'opacity', duration:this.options.fadeSpeed });
+		
+		//hide and begin the listener
+		this.hide().startListener();
+		
+		//hide the menu
+		this.menu.setStyles({ 'position':'absolute','top':'-900000px', 'display':'block' });
+	},
+	
+	//get things started
+	startListener: function() {
+		/* all elements */
+		this.targets.each(function(el) {
+			/* show the menu */
+			el.addEvent(this.options.trigger,function(e) {
+				//enabled?
+				if(!this.options.disabled) {
+					//prevent default, if told to
+					if(this.options.stopEvent) { e.stop(); }
+					//record this as the trigger
+					this.options.element = $(el);
+					//position the menu
+					this.menu.setStyles({
+						top: (e.page.y + this.options.offsets.y),
+						left: (e.page.x + this.options.offsets.x),
+						position: 'absolute',
+						'z-index': '2000'
+					});
+					//show the menu
+					this.show();
+				}
+			}.bind(this));
+		},this);
+		
+		/* menu items */
+		this.menu.getElements('a').each(function(item) {
+			item.addEvent('click',function(e) {
+				if(!item.hasClass('disabled')) {
+					this.execute(item.get('href').split('#')[1],$(this.options.element));
+					this.fireEvent('click',[item,e]);
+				}
+			}.bind(this));
+		},this);
+		
+		//hide on body click
+		$(document.body).addEvent('click', function() {
+			this.hide();
+		}.bind(this));
+	},
+	
+	//show menu
+	show: function(trigger) {
+		//this.menu.fade('in');
+		this.fx.start(1);
+		this.fireEvent('show');
+		this.shown = true;
+		return this;
+	},
+	
+	//hide the menu
+	hide: function(trigger) {
+		if(this.shown)
+		{
+			this.fx.start(0);
+			//this.menu.fade('out');
+			this.fireEvent('hide');
+			this.shown = false;
+		}
+		return this;
+	},
+	
+	//disable an item
+	disableItem: function(item) {
+		this.menu.getElements('a[href$=' + item + ']').addClass('disabled');
+		return this;
+	},
+	
+	//enable an item
+	enableItem: function(item) {
+		this.menu.getElements('a[href$=' + item + ']').removeClass('disabled');
+		return this;
+	},
+	
+	//diable the entire menu
+	disable: function() {
+		this.options.disabled = true;
+		return this;
+	},
+	
+	//enable the entire menu
+	enable: function() {
+		this.options.disabled = false;
+		return this;
+	},
+	
+	//execute an action
+	execute: function(action,element) {
+		if(this.options.actions[action]) {
+			this.options.actions[action](element,this);
+		}
+		return this;
+	}
+	
+});
+</pre><pre class="standardLighter twilightLighter"><a class="codeCopy" href="javascript:;">copy</a><span class="kw2">var</span> ContextMenu <span class="sy0">=</span> <span class="kw2">new</span> Class<span class="br0">(</span><span class="br0">{</span>
+
+ <span class="co1"> //implements</span>
+  Implements<span class="sy0">:</span> <span class="br0">[</span>Options<span class="sy0">,</span>Events<span class="br0">]</span><span class="sy0">,</span>
+
+ <span class="co1"> //options</span>
+  options<span class="sy0">:</span> <span class="br0">{</span>
+    actions<span class="sy0">:</span> <span class="br0">{</span><span class="br0">}</span><span class="sy0">,</span>
+    menu<span class="sy0">:</span> <span class="st0">'contextmenu'</span><span class="sy0">,</span>
+    stopEvent<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+    targets<span class="sy0">:</span> <span class="st0">'body'</span><span class="sy0">,</span>
+    trigger<span class="sy0">:</span> <span class="st0">'contextmenu'</span><span class="sy0">,</span>
+    offsets<span class="sy0">:</span> <span class="br0">{</span> x<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span> y<span class="sy0">:</span><span class="nu0">0</span> <span class="br0">}</span><span class="sy0">,</span>
+    onShow<span class="sy0">:</span> $empty<span class="sy0">,</span>
+    onHide<span class="sy0">:</span> $empty<span class="sy0">,</span>
+    onClick<span class="sy0">:</span> $empty<span class="sy0">,</span>
+    fadeSpeed<span class="sy0">:</span> <span class="nu0">200</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //initialization</span>
+  initialize<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>options<span class="br0">)</span> <span class="br0">{</span>
+   <span class="co1"> //set options</span>
+    <span class="kw1">this</span>.<span class="me0">setOptions</span><span class="br0">(</span>options<span class="br0">)</span>
+    
+   <span class="co1"> //option diffs menu</span>
+    <span class="kw1">this</span>.<span class="me0">menu</span> <span class="sy0">=</span> $<span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">menu</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me0">targets</span> <span class="sy0">=</span> $$<span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">targets</span><span class="br0">)</span><span class="sy0">;</span>
+    
+   <span class="co1"> //fx</span>
+    <span class="kw1">this</span>.<span class="me0">fx</span> <span class="sy0">=</span> <span class="kw2">new</span> Fx.<span class="me0">Tween</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me0">menu</span><span class="sy0">,</span> <span class="br0">{</span> property<span class="sy0">:</span> <span class="st0">'opacity'</span><span class="sy0">,</span> duration<span class="sy0">:</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">fadeSpeed</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+    
+   <span class="co1"> //hide and begin the listener</span>
+    <span class="kw1">this</span>.<span class="me0">hide</span><span class="br0">(</span><span class="br0">)</span>.<span class="me0">startListener</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    
+   <span class="co1"> //hide the menu</span>
+    <span class="kw1">this</span>.<span class="me0">menu</span>.<span class="me0">setStyles</span><span class="br0">(</span><span class="br0">{</span> <span class="st0">'position'</span><span class="sy0">:</span><span class="st0">'absolute'</span><span class="sy0">,</span><span class="st0">'top'</span><span class="sy0">:</span><span class="st0">'-900000px'</span><span class="sy0">,</span> <span class="st0">'display'</span><span class="sy0">:</span><span class="st0">'block'</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //get things started</span>
+  startListener<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="co2">/* all elements */</span>
+    <span class="kw1">this</span>.<span class="me0">targets</span>.<span class="me0">each</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span>el<span class="br0">)</span> <span class="br0">{</span>
+      <span class="co2">/* show the menu */</span>
+      el.<span class="me0">addEvent</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">trigger</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span>
+       <span class="co1"> //enabled?</span>
+        <span class="kw1">if</span><span class="br0">(</span><span class="sy0">!</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">disabled</span><span class="br0">)</span> <span class="br0">{</span>
+         <span class="co1"> //prevent default, if told to</span>
+          <span class="kw1">if</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">stopEvent</span><span class="br0">)</span> <span class="br0">{</span> e.<span class="me0">stop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span>
+         <span class="co1"> //record this as the trigger</span>
+          <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">element</span> <span class="sy0">=</span> $<span class="br0">(</span>el<span class="br0">)</span><span class="sy0">;</span>
+         <span class="co1"> //position the menu</span>
+          <span class="kw1">this</span>.<span class="me0">menu</span>.<span class="me0">setStyles</span><span class="br0">(</span><span class="br0">{</span>
+            top<span class="sy0">:</span> <span class="br0">(</span>e.<span class="me0">page</span>.<span class="me0">y</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">offsets</span>.<span class="me0">y</span><span class="br0">)</span><span class="sy0">,</span>
+            left<span class="sy0">:</span> <span class="br0">(</span>e.<span class="me0">page</span>.<span class="me0">x</span> <span class="sy0">+</span> <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">offsets</span>.<span class="me0">x</span><span class="br0">)</span><span class="sy0">,</span>
+            position<span class="sy0">:</span> <span class="st0">'absolute'</span><span class="sy0">,</span>
+            <span class="st0">'z-index'</span><span class="sy0">:</span> <span class="st0">'2000'</span>
+          <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+         <span class="co1"> //show the menu</span>
+          <span class="kw1">this</span>.<span class="me0">show</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+      <span class="br0">}</span>.<span class="me0">bind</span><span class="br0">(</span><span class="kw1">this</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span><span class="sy0">,</span><span class="kw1">this</span><span class="br0">)</span><span class="sy0">;</span>
+    
+    <span class="co2">/* menu items */</span>
+    <span class="kw1">this</span>.<span class="me0">menu</span>.<span class="me0">getElements</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span>.<span class="me0">each</span><span class="br0">(</span><span class="kw2">function</span><span class="br0">(</span><span class="kw1">item</span><span class="br0">)</span> <span class="br0">{</span>
+      <span class="kw1">item</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span>
+        <span class="kw1">if</span><span class="br0">(</span><span class="sy0">!</span><span class="kw1">item</span>.<span class="me0">hasClass</span><span class="br0">(</span><span class="st0">'disabled'</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span>
+          <span class="kw1">this</span>.<span class="me0">execute</span><span class="br0">(</span><span class="kw1">item</span>.<span class="me0">get</span><span class="br0">(</span><span class="st0">'href'</span><span class="br0">)</span>.<span class="me0">split</span><span class="br0">(</span><span class="st0">'#'</span><span class="br0">)</span><span class="br0">[</span><span class="nu0">1</span><span class="br0">]</span><span class="sy0">,</span>$<span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">element</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+          <span class="kw1">this</span>.<span class="me0">fireEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="br0">[</span><span class="kw1">item</span><span class="sy0">,</span>e<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span>
+        <span class="br0">}</span>
+      <span class="br0">}</span>.<span class="me0">bind</span><span class="br0">(</span><span class="kw1">this</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span><span class="sy0">,</span><span class="kw1">this</span><span class="br0">)</span><span class="sy0">;</span>
+    
+   <span class="co1"> //hide on body click</span>
+    $<span class="br0">(</span>document.<span class="me0">body</span><span class="br0">)</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+      <span class="kw1">this</span>.<span class="me0">hide</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>.<span class="me0">bind</span><span class="br0">(</span><span class="kw1">this</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //show menu</span>
+  show<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>trigger<span class="br0">)</span> <span class="br0">{</span>
+   <span class="co1"> //this.menu.fade('in');</span>
+    <span class="kw1">this</span>.<span class="me0">fx</span>.<span class="me0">start</span><span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me0">fireEvent</span><span class="br0">(</span><span class="st0">'show'</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">this</span>.<span class="me0">shown</span> <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //hide the menu</span>
+  hide<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>trigger<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me0">shown</span><span class="br0">)</span>
+    <span class="br0">{</span>
+      <span class="kw1">this</span>.<span class="me0">fx</span>.<span class="me0">start</span><span class="br0">(</span><span class="nu0">0</span><span class="br0">)</span><span class="sy0">;</span>
+     <span class="co1"> //this.menu.fade('out');</span>
+      <span class="kw1">this</span>.<span class="me0">fireEvent</span><span class="br0">(</span><span class="st0">'hide'</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="kw1">this</span>.<span class="me0">shown</span> <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //disable an item</span>
+  disableItem<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span><span class="kw1">item</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">this</span>.<span class="me0">menu</span>.<span class="me0">getElements</span><span class="br0">(</span><span class="st0">'a[href$='</span> <span class="sy0">+</span> <span class="kw1">item</span> <span class="sy0">+</span> <span class="st0">']'</span><span class="br0">)</span>.<span class="me0">addClass</span><span class="br0">(</span><span class="st0">'disabled'</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //enable an item</span>
+  enableItem<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span><span class="kw1">item</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">this</span>.<span class="me0">menu</span>.<span class="me0">getElements</span><span class="br0">(</span><span class="st0">'a[href$='</span> <span class="sy0">+</span> <span class="kw1">item</span> <span class="sy0">+</span> <span class="st0">']'</span><span class="br0">)</span>.<span class="me0">removeClass</span><span class="br0">(</span><span class="st0">'disabled'</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //diable the entire menu</span>
+  disable<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">disabled</span> <span class="sy0">=</span> <span class="kw2">true</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //enable the entire menu</span>
+  enable<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">disabled</span> <span class="sy0">=</span> <span class="kw2">false</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span><span class="sy0">,</span>
+  
+ <span class="co1"> //execute an action</span>
+  execute<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>action<span class="sy0">,</span>element<span class="br0">)</span> <span class="br0">{</span>
+    <span class="kw1">if</span><span class="br0">(</span><span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">actions</span><span class="br0">[</span>action<span class="br0">]</span><span class="br0">)</span> <span class="br0">{</span>
+      <span class="kw1">this</span>.<span class="me0">options</span>.<span class="me0">actions</span><span class="br0">[</span>action<span class="br0">]</span><span class="br0">(</span>element<span class="sy0">,</span><span class="kw1">this</span><span class="br0">)</span><span class="sy0">;</span>
+    <span class="br0">}</span>
+    <span class="kw1">return</span> <span class="kw1">this</span><span class="sy0">;</span>
+  <span class="br0">}</span>
+  
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>The ContextMenu plugin offers numerous options:</p>
+<ul>
+	<li><span class="param">actions</span>: a collection of actions (functions) to be executed when a corresponding menu item is clicked</li>
+	<li><span class="param">menu</span>: the ID of the element that represents the menu XHTML</li>
+	<li><span class="param">stopEvent</span>: do you want the element's default action to be stopped when the menu is triggered to display? (defaults to true)</li>
+	<li><span class="param">targets</span>: element(s) that should show the menu when triggered (defaults to the document body)</li>
+	<li><span class="param">trigger</span>: event that triggers the menu to display (defaults to "contextmenu", or right-click)</li>
+	<li><span class="param">offsets</span>:  an {x,y} object with corresponding x and y offsets (x and y both default to 0)</li>
+	<li><span class="param">onShow</span>: a function to execute when the menu is shown</li>
+	<li><span class="param">onHide</span>: a function to execute when the menu is hidden</li>
+	<li><span class="param">onClick</span>: a function to execute when a menu item is clicked</li>
+</ul>
+<p>Beyond these initial options, the ContextMenu class also provide some useful methods:</p>
+<ul>
+	<li><span class="param">disable</span>: disables the context menu</li>
+	<li><span class="param">enable</span>: enables the context menu</li>
+	<li><span class="param">disableItem</span>: disables a given menu item</li>
+	<li><span class="param">enableItem: enables a given menu item</span></li>
+</ul>
+<strong>The Sample Usage</strong>
+
+<pre style="display: none;" class="js">window.addEvent('domready', function() {
+
+	//create a context menu
+	var context = new ContextMenu({
+		targets: 'a', //menu only available on links
+		menu: 'contextmenu',
+		actions: {
+			copy: function(element,ref) { //copy action changes the element's color to green and disables the menu
+				element.setStyle('color','#090');
+				ref.disable();
+			}
+		},
+		offsets: { x:2, y:2 }
+	});
+	
+	//sample usages of the enable/disable functionality
+	$('enable').addEvent('click',function(e) { e.stop(); context.enable(); });
+	$('disable').addEvent('click',function(e) { e.stop(); context.disable(); });
+	$('enable-copy').addEvent('click',function(e) { e.stop(); context.enableItem('copy'); });
+	$('disable-copy').addEvent('click',function(e) { e.stop(); context.disableItem('copy'); });
+	
+});
+</pre><pre class="standardLighter twilightLighter"><a class="codeCopy" href="javascript:;">copy</a>window.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'domready'</span><span class="sy0">,</span> <span class="kw2">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+
+ <span class="co1"> //create a context menu</span>
+  <span class="kw2">var</span> context <span class="sy0">=</span> <span class="kw2">new</span> ContextMenu<span class="br0">(</span><span class="br0">{</span>
+    targets<span class="sy0">:</span> <span class="st0">'a'</span><span class="sy0">,</span><span class="co1"> //menu only available on links</span>
+    menu<span class="sy0">:</span> <span class="st0">'contextmenu'</span><span class="sy0">,</span>
+    actions<span class="sy0">:</span> <span class="br0">{</span>
+      copy<span class="sy0">:</span> <span class="kw2">function</span><span class="br0">(</span>element<span class="sy0">,</span>ref<span class="br0">)</span> <span class="br0">{</span><span class="co1"> //copy action changes the element's color to green and disables the menu</span>
+        element.<span class="me0">setStyle</span><span class="br0">(</span><span class="st0">'color'</span><span class="sy0">,</span><span class="st0">'#090'</span><span class="br0">)</span><span class="sy0">;</span>
+        ref.<span class="me0">disable</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+      <span class="br0">}</span>
+    <span class="br0">}</span><span class="sy0">,</span>
+    offsets<span class="sy0">:</span> <span class="br0">{</span> x<span class="sy0">:</span><span class="nu0">2</span><span class="sy0">,</span> y<span class="sy0">:</span><span class="nu0">2</span> <span class="br0">}</span>
+  <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  
+ <span class="co1"> //sample usages of the enable/disable functionality</span>
+  $<span class="br0">(</span><span class="st0">'enable'</span><span class="br0">)</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span> e.<span class="me0">stop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> context.<span class="me0">enable</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  $<span class="br0">(</span><span class="st0">'disable'</span><span class="br0">)</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span> e.<span class="me0">stop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> context.<span class="me0">disable</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  $<span class="br0">(</span><span class="st0">'enable-copy'</span><span class="br0">)</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span> e.<span class="me0">stop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> context.<span class="me0">enableItem</span><span class="br0">(</span><span class="st0">'copy'</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  $<span class="br0">(</span><span class="st0">'disable-copy'</span><span class="br0">)</span>.<span class="me0">addEvent</span><span class="br0">(</span><span class="st0">'click'</span><span class="sy0">,</span><span class="kw2">function</span><span class="br0">(</span>e<span class="br0">)</span> <span class="br0">{</span> e.<span class="me0">stop</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span> context.<span class="me0">disableItem</span><span class="br0">(</span><span class="st0">'copy'</span><span class="br0">)</span><span class="sy0">;</span> <span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+  
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>The most dynamic part of the ContextMenu instance is the <span class="param">actions</span>
+ option, where you define what action should be taken per menu item.  
+The action is passed the element clicked on and the reference to the 
+context menu.  My above example defines the copy action.  When you click
+ the "Copy" context menu item, I turn the text color green and disable 
+the context menu.  You may define one action per menu item.</p>
+
+<div class="actions">
+<a href="http://davidwalsh.name/dw-content/moo-context-menu.php" class="demo">View Demo</a>
+<a href="http://davidwalsh.name/dw-content/ContextMenu.js" class="download">Download</a>
+<div class="clear"></div>
+</div>
+
+
+<p>This is version 1 of ContextMenu.  I'd like to implement a few more features in the future, including:</p>
+<ul>
+	<li>Multi-level menus</li>
+	<li>A core set of actions with corresponding functionality.</li>
+	<li>addItem and removeItem methods</li>
+</ul>
+<p>Have suggestions for a version 2?  Share them!</p>
+<p><em>ContextMenu is inspired by <a href="http://abeautifulsite.net/notebook/80" rel="nofollow">jQuery Context Menu Plugin</a>.</em></p>	</article></div>
+		
+		<!--moobot_noindex-->
+				
+		<!-- ad -->
+		
+		<div id="singlesSponsors">
+			<div id="bsap_1242453" class="bsap_1242453 bsap"><a href="http://stats.buysellads.com/click.go?z=1242453&amp;b=204427&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.3402158361083445&amp;link=http://www.elegantthemes.com" onmouseover="window.status = 'http://www.elegantthemes.com'; return true;" onmouseout="window.status=''; return true;" class="ad1 odd" title="Premium Wordpress Themes" id="bsa_204427" target="_blank"><img src="mootools-context-menu_files/11106-1259737184.jpg" alt="Premium Wordpress Themes" height="75" width="390"></a></div>
+			<br class="clear">
+		</div>
+		
+		<!-- Related -->
+		<div id="postMetaHolder">
+			<div id="postMetaHolderLeft">
+				<h4>Related David Walsh Posts</h4>
+				<ul>
+					<div id="related-wrap"><ul><li><a href="http://davidwalsh.name/dojo-context-menu" rel="bookmark" title="Permanent Link: Create a Context Menu with Dojo and&nbsp;Dijit">Create a Context Menu with Dojo and&nbsp;Dijit</a></li>
+<li><a href="http://davidwalsh.name/submit-button-enable" rel="bookmark" title="Permanent Link: Submit Button&nbsp;Enabling">Submit Button&nbsp;Enabling</a></li>
+<li><a href="http://davidwalsh.name/mootools-clipboard-plugin" rel="bookmark" title="Permanent Link: MooTools Clipboard&nbsp;Plugin">MooTools Clipboard&nbsp;Plugin</a></li>
+<li><a href="http://davidwalsh.name/glitter-navigation-mootools-javascript" rel="bookmark" title="Permanent Link: Fancy Navigation with MooTools&nbsp;JavaScript">Fancy Navigation with MooTools&nbsp;JavaScript</a></li>
+<li><a href="http://davidwalsh.name/disable-right-click-mootools" rel="bookmark" title="Permanent Link: Disable Right Click Using MooTools&nbsp;1.2">Disable Right Click Using MooTools&nbsp;1.2</a></li>
+</ul></div>				</ul>
+			</div>
+			<div id="postMetaHolderRight">
+				<h4>Written By David Walsh</h4>
+				<p style="margin-bottom: 20px;">Debuted on Wednesday, January 28, 2009.</p>
+				
+				<h4>Feedback Welcome</h4>
+				<p>Was this blog post helpful?</p>
+				<form class="star_gmqrfc8w" id="ratingForm" style="display: block; margin-top: 10px;">
+					<input style="display: none;" name="rating" value="0.5" type="radio"><input style="display: none;" name="rating" value="1" type="radio"><input style="display: none;" name="rating" value="1.5" type="radio"><input style="display: none;" name="rating" value="2" type="radio"><input style="display: none;" name="rating" value="2.5" type="radio"><input style="display: none;" name="rating" value="3" type="radio"><input style="display: none;" name="rating" value="3.5" type="radio"><input style="display: none;" name="rating" value="4" type="radio"><input style="display: none;" name="rating" value="4.5" type="radio"><input style="display: none;" name="rating" value="5" type="radio"><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: 0pt 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: -8px 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: 0pt 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: -8px 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: 0pt 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: -8px 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: 0pt 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: -8px 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: 0pt 0pt; cursor: pointer;" class="star"></a><a style="background-image: url(&quot;/wp-content/themes/klass/js/ratings/Graphics/star_boxed_empty.png&quot;); background-repeat: no-repeat; display: inline-block; width: 8px; height: 16px; background-position: -8px 0pt; cursor: pointer;" class="star"></a>					<input id="postId" value="966" type="hidden">
+				</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		
+		<!-- <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://davidwalsh.name/mootools-context-menu"
+    dc:identifier="http://davidwalsh.name/mootools-context-menu"
+    dc:title="MooTools ContextMenu&nbsp;Plugin"
+    trackback:ping="http://davidwalsh.name/mootools-context-menu/trackback" />
+</rdf:RDF> -->
+		<a name="comments"></a>
+<div class="page-break"></div>
+<br class="noprint">
+<h2 class="noprint">Brilliant Discussion</h2>
+<ol id="comment-list">
+				<li id="comment-7523">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_010.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=13f80c103e4cc1f5fbd39d0f5f6caa09&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.webresourcesdepot.com/" rel="external nofollow" class="url">Umut</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 9:06 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>David,</p>
+<p>Great job. I love how context menus improve usability specially in admin UIs.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7523" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7523', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7523-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7523" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7523', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7523-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7523" username="Umut" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7524">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_003.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=368f9b64e2a428c1491564f58d7ab638&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://rexxars.com/" rel="external nofollow" class="url">Rexxars</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 9:13 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Nice plugin! A little note on which license you’re releasing 
+this under would be nice :-) I will concider using this one on some of 
+my admin panels, if the license is right, hehe :-)</p>
+<p>There’s a couple of things I’d personally alter, though most of these are simply code style differences.<br>
+I like to keep the indentation to a minimum, and I also like to take advantage of the way mootools handles groups of elements.</p>
+<p>For example, instead of doing this.targets.each and then running a 
+item.addEvent on that, you could simply run addEvent on this.targets 
+instead. The only difference here would be that you’d refer to 
+this.target instead of item, or set item to this.target. Also, instead 
+of doing “if(!this.options.disabled) { indented code below }”, you could
+ check it the other way around, and return.. so it becomes 
+“if(this.options.disabled) return;”</p>
+<p>All of these things are, as I said, merely code style, so these are 
+just tips if you want to cut down on the indenting and possibly save a 
+few lines of code. I posted the altered code on your <a href="http://paste.davidwalsh.name/pastebin.php?show=d53026727" rel="nofollow">pastebin</a> if you are interested.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7524" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7524', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7524-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7524" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7524', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7524-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7524" username="Rexxars" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7525" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">david</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 9:37 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@Rexxars:  Thank you for the input and I’ll look at the 
+licenses.  Hadn’t thought about it.  Like everything else on this site, 
+use it however you’d like!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7525" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7525', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7525-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7525" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7525', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7525-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7525" username="david" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7526">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_020.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=4e53b4408660ff4195d0d7b7a879bee6&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Ryan</span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 9:58 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Wow … definitely using this on a few of my sites.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7526" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7526', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7526-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7526" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7526', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7526-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7526" username="Ryan" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7527">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=133e71b931d7d52be70757da3b1fdd23&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://kroppr.rborn.info/" rel="external nofollow" class="url">rborn</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 10:33 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi<br>
+This is not working in opera… because of opera of course.<br>
+As I remember there is a setting in opera to allow or not right click, but most of the users will have the standard settings.<br>
+So i think you can detect opera and add something like ctrl+click to launch the menu.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7527" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7527', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7527-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7527" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7527', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7527-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7527" username="rborn" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7528">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_006.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f7738bfc1c31281bac329f4be67fbbea&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.rawr.be/" rel="external nofollow" class="url">Ahmed</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 10:42 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Wow, I’ve been waiting for this for so long!<br>
+Unfortunately it doesn’t work on Opera because of how annoying opera is,
+ I am sure you’ll find a solution for this sometime soon, or like rborn 
+suggested! Nonetheless, its a great class!<br>
+Thanks :)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7528" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7528', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7528-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7528" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7528', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7528-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7528" username="Ahmed" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7529" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">david</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 10:46 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@rborn: The beauty is that you can choose the trigger.  You 
+could make it double-click if you need Opera users to be able to use the
+ menu.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7529" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7529', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7529-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7529" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7529', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7529-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7529" username="david" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7531">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=b668360f53c9975bca11992742e2effe&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://eriwen.com/" rel="external nofollow" class="url">Eric Wendelin</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 11:27 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Excellent, David! I know a lot of places where something like this could be used.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7531" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7531', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7531-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7531" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7531', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7531-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7531" username="Eric Wendelin" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7535">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_004.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=2b26fb980bf06f37e7f5ed4cf0a27560&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.marksanborn.net/" rel="external nofollow" class="url">Mark Sanborn</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 2:59 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Is it possible to have the menu close when you left click outside of the region?</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7535" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7535', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7535-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7535" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7535', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7535-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7535" username="Mark Sanborn" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7536" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">david</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 3:04 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Updated.  Thanks Mark!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7536" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7536', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7536-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7536" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7536', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7536-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7536" username="david" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7537">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_002.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=eed5cd2268da6f34389ab3d4bf10117c&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://weblogs.asp.net/thiagosantos" rel="external nofollow" class="url">Thiago</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 3:29 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>It looks fantastic. Looking forward an opportunity to use in one of my projects. Some feedback tho:<br>
+  – I’m getting errors when running in IE (“Object doesn’t support this 
+property or method” kind of error on lines 144 and 2705);<br>
+  – Displays fine in FF and Safari. I don’t use Opera in my desktop;<br>
+  – It didn’t copy the selected text in any browser(Safari and FF) I tested.</p>
+<p>keep up the good work :)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7537" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7537', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7537-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7537" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7537', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7537-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7537" username="Thiago" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7538" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">david</a></span>
+					<!-- time -->
+					<span class="commentTime">on January 28, 2009 @ 3:36 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@Thiago: It wasn’t supposed to copy text to your clipboard — 
+it’s supposed to turn text green and disable the menu.  Also, I’ve just 
+cured the IE issue.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7538" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7538', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7538-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7538" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7538', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7538-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7538" username="david" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-7919">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_018.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=14ed03adf27f5fdef029c9ec7fdc8a32&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">bioule</span>
+					<!-- time -->
+					<span class="commentTime">on February 25, 2009 @ 6:31 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi, really nice work !<br>
+I used it in a complex interface. It needs to be initialized several 
+times in it’s lifetime. So, when I call for the second time the 
+constructor, the menu will execute two times the expected function…<br>
+So, I just removed the events just before add them<br>
+At line 64 of ContextMenu Class, I just added this code:</p>
+<p>/* menu items */<br>
+this.menu.getElements(‘a’).each(function(item){<br>
+    item.removeEvents();<br>
+});</p>
+<p>Thank you again for your class :)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-7919" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('7919', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-7919-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-7919" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('7919', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-7919-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="7919" username="bioule" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8039">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_006.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=8dede2c016732a359a168b2632f53489&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">David Hinckle</span>
+					<!-- time -->
+					<span class="commentTime">on March 4, 2009 @ 1:14 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Nice script David. I can’t figure out how to keep the script 
+from appending the url when clicking on a menu item. Is there a way??? 
+Thanks in advance.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8039" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8039', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8039-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8039" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8039', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8039-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8039" username="David Hinckle" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8041" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">David Walsh</a></span>
+					<!-- time -->
+					<span class="commentTime">on March 4, 2009 @ 2:18 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@David Hinckle: What do you mean by this?  I’m not following.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8041" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8041', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8041-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8041" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8041', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8041-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8041" username="David Walsh" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8042">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_006.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=8dede2c016732a359a168b2632f53489&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">David Hinckle</span>
+					<!-- time -->
+					<span class="commentTime">on March 4, 2009 @ 3:25 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Sorry, I’m probably being too anal about this to begin with. 
+Using your demo as an example, when one clicks on the edit link, “#edit”
+ is appended to the end of the url. I’d like to do away with this. 
+Thanks again. DH</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8042" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8042', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8042-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8042" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8042', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8042-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<ul class="children">
+
+				<li id="comment-23202">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_009.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ff756df96e0f10123a157214c80ef53f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://milyaev.awardspace.com/" rel="external nofollow" class="url">Nestor</a></span>
+					<!-- time -->
+					<span class="commentTime">on March 22, 2011 @ 5:27 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>I suggest using the “name” attribute instead of the “href” on 
+the link to avoid the “#action” being addded to the url. Easy fix, as 
+follows:</p>
+<p>In your HTML :</p>
+<p>	<a>Edit</a><br>
+	<a>Cut</a><br>
+	<a>Copy</a><br>
+	<a>Paste</a><br>
+	<a>Delete</a><br>
+	<a>Quit</a></p>
+<p>then in line 68 0f the script:</p>
+<p>		/* menu items */<br>
+		this.menu.getElements(‘a’).each(function(item) {<br>
+			item.addEvent(‘click’,function(e) {<br>
+				if(!item.hasClass(‘disabled’)) {<br>
+					this.execute(item.get(‘name’),$(this.options.element));<br>
+					this.fireEvent(‘click’,[item,e]);<br>
+				}<br>
+			}.bind(this));<br>
+		},this);</p>
+<p>Enjoy!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-23202" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('23202', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-23202-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-23202" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('23202', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-23202-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="23202" username="Nestor" class="commentReply" href="">Reply</a></li>
+</ul>
+<a commentid="8042" username="David Hinckle" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8214">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_013.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=8c172f85fb90c4b08558fc2aadce1354&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">scott</span>
+					<!-- time -->
+					<span class="commentTime">on March 13, 2009 @ 5:14 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hey David…I’m having the same problem as @David Hinckle.  My 
+script keeps appending “#edit” or whatever the “click” event is to the 
+end of my URL string.  Normally this wouldn’t be a problem, but it 
+messes up when I throw .htaccess into the mix.</p>
+<p>Example:</p>
+<p>Say I’ve got an url:    <a href="http://www.whatever.com/services/" rel="nofollow">http://www.whatever.com/services/</a>     &lt;== using .htaccess for clean url</p>
+<p>When the “click” event is added:  <a href="http://www.whatever.com/services/#edit" rel="nofollow">http://www.whatever.com/services/#edit</a>  &lt;== appended to url after “click” event…page won’t load.</p>
+<p>I hope I’ve explained this well enough…and suggestions?</p>
+<p>Thanks…great site btw.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8214" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8214', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8214-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8214" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8214', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8214-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8214" username="scott" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8215">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_013.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=8c172f85fb90c4b08558fc2aadce1354&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">scott</span>
+					<!-- time -->
+					<span class="commentTime">on March 13, 2009 @ 5:37 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Nevermind….I figured it out.  I added e.stop(); to the “click” event function.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8215" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8215', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8215-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8215" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8215', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8215-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8215" username="scott" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8223">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_003.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=981b46396a22bf5a8190506fe892b3b5&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.alfystudio.com/" rel="external nofollow" class="url">Ahmad Alfy</a></span>
+					<!-- time -->
+					<span class="commentTime">on March 14, 2009 @ 7:28 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Not working in Opera.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8223" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8223', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8223-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8223" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8223', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8223-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8223" username="Ahmad Alfy" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8248" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">David Walsh</a></span>
+					<!-- time -->
+					<span class="commentTime">on March 16, 2009 @ 9:04 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@Ahmed Alfy:  Use a different “trigger”, like double click.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8248" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8248', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8248-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8248" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8248', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8248-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8248" username="David Walsh" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8262">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_007.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=85218d114a7cfb246877d9224f78dc9a&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Jose Gonzalez</span>
+					<!-- time -->
+					<span class="commentTime">on March 17, 2009 @ 9:56 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Wow David, your work is impressive like always!!</p>
+<p>i’ll try it ;D!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8262" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8262', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8262-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8262" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8262', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8262-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8262" username="Jose Gonzalez" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-8629">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_017.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=4a20cd37af0f0e00c076412f5ee0aa68&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://imdesign.nl/" rel="external nofollow" class="url">milder</a></span>
+					<!-- time -->
+					<span class="commentTime">on April 9, 2009 @ 5:21 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>It’s not working perfectly in safari on OSX. </p>
+<p>The menu will show, but you can’t use it as it should be. It’s 
+ignoring the mouseover. You have to click on the menu first and hold 
+down the mouseclick, move the cursor away from the menu, release the 
+mouseclick and now you can use it. </p>
+<p>Anyway.. nice menu! Keep up the good work!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-8629" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('8629', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-8629-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-8629" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('8629', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-8629-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="8629" username="milder" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-9250">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_005.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ebd47b2e8b4b93f09b956e9316ccd19c&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Ben</span>
+					<!-- time -->
+					<span class="commentTime">on May 16, 2009 @ 12:02 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hey, just want to say I love this tool!  I was actually 
+wondering if it was somehow possible to pass the element to the onShow 
+event, so I could change the menu based on the elements properties 
+before the menu actually showed?</p>
+<p>Thanks!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-9250" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('9250', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-9250-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-9250" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('9250', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-9250-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="9250" username="Ben" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-9298">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_005.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ebd47b2e8b4b93f09b956e9316ccd19c&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Ben</span>
+					<!-- time -->
+					<span class="commentTime">on May 19, 2009 @ 10:41 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Acutally, I figured it out after reading over your code again.  Thx :)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-9298" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('9298', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-9298-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-9298" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('9298', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-9298-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="9298" username="Ben" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-9510">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_012.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=3e64fc7bcbfa433f6b7c1f96ee801879&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Kyle</span>
+					<!-- time -->
+					<span class="commentTime">on May 29, 2009 @ 5:28 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi David,</p>
+<p>I’m not sure if anyone else noticed or was bothered by this, but when
+ you right-click to get the context menu, in everything but opera 
+apparently, there’s the potential that it will highlight text.  You can 
+prevent that by adding this to the show() function:</p>
+<blockquote><p>
+          if(document.selection &amp;&amp; document.selection.empty) {<br>
+              document.selection.empty();<br>
+          } else if(window.getSelection) {<br>
+              window.getSelection().removeAllRanges();<br>
+          }</p>
+</blockquote>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-9510" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('9510', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-9510-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-9510" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('9510', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-9510-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="9510" username="Kyle" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-10275">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_002.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=859964887d925d93b82aff545a6224c7&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.webdev3000.com/" rel="external nofollow" class="url">Csaba</a></span>
+					<!-- time -->
+					<span class="commentTime">on July 9, 2009 @ 5:08 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>This is something I would like to see done in JQuery.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-10275" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('10275', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-10275-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-10275" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('10275', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-10275-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="10275" username="Csaba" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11223">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f70c6af3580f2286a7296478b8a2ffac&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Maximiliano</span>
+					<!-- time -->
+					<span class="commentTime">on August 12, 2009 @ 4:20 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi There, i wonder if there is any way to put this context menu
+ to every row in a table, of couse each item has to have a different 
+menu so i can get for example  a data from the row.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11223" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11223', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11223-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11223" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11223', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11223-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11223" username="Maximiliano" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11224" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">David Walsh</a></span>
+					<!-- time -->
+					<span class="commentTime">on August 12, 2009 @ 4:25 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@Maximiliano:  Yes, so set the “targets” to “#MyTable tr”</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11224" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11224', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11224-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11224" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11224', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11224-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11224" username="David Walsh" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11225">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f70c6af3580f2286a7296478b8a2ffac&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Maximiliano</span>
+					<!-- time -->
+					<span class="commentTime">on August 12, 2009 @ 5:05 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi Again, the thing your mention it works, so im trying right 
+now to gather one element from the Table or something , can you write 
+something that could help me?</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11225" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11225', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11225-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11225" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11225', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11225-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11225" username="Maximiliano" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11226">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f70c6af3580f2286a7296478b8a2ffac&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Maximiliano</span>
+					<!-- time -->
+					<span class="commentTime">on August 12, 2009 @ 5:49 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>I make it works with element.cells[1].innerText</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11226" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11226', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11226-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11226" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11226', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11226-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11226" username="Maximiliano" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11268">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f70c6af3580f2286a7296478b8a2ffac&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Maximiliano</span>
+					<!-- time -->
+					<span class="commentTime">on August 13, 2009 @ 1:08 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>There is anyway to know the element using the onShow Event?</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11268" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11268', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11268-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11268" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11268', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11268-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11268" username="Maximiliano" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-11273">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_011.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=f70c6af3580f2286a7296478b8a2ffac&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Maximiliano</span>
+					<!-- time -->
+					<span class="commentTime">on August 13, 2009 @ 2:09 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Sorry, i figured out, i can use this</p>
+<p>onShow: function(){<br>
+  alert(this.options.element.cells[1].innerText);<br>
+}</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-11273" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('11273', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-11273-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-11273" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('11273', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-11273-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="11273" username="Maximiliano" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13513">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_008.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=c3a31146df4191e6e875782abe0bb5ec&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">jpodnegara</span>
+					<!-- time -->
+					<span class="commentTime">on November 10, 2009 @ 8:44 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>great one David..!! thanks.. ^_^ but does it work on omnigrid ?</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13513" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13513', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13513-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13513" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13513', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13513-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13513" username="jpodnegara" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13547">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_010.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=b0434ee1274e3784c7617001476e9faf&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">bosko</span>
+					<!-- time -->
+					<span class="commentTime">on November 11, 2009 @ 11:18 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>hello</p>
+<p>wery nice script david. i want to use on whole body (wherever its 
+right clicked) not on only one DIV … its there possible to make that?</p>
+<p>thank you</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13547" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13547', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13547-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13547" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13547', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13547-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13547" username="bosko" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13857">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_009.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=63940040103e0aff23b67f250f853782&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://moodle.org/mod/data/view.php?d=13&amp;rid=2350" rel="external nofollow" class="url">Davo Smith</a></span>
+					<!-- time -->
+					<span class="commentTime">on November 22, 2009 @ 2:47 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Just thought I’d let you know that I’ve added an adapted 
+version of this to my PDF annotation Moodle module, so thanks for making
+ this code available!</p>
+<p>(FYI the link to the Moodle module is above)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13857" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13857', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13857-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13857" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13857', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13857-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13857" username="Davo Smith" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13879">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_005.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=7024c7d82730327fef65ad154b3b3fe2&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Alfred</span>
+					<!-- time -->
+					<span class="commentTime">on November 23, 2009 @ 6:37 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi,</p>
+<p>sorry – looking at the code -but seems i’m stupid. Where you trigger right mouse click?</p>
+<p>How to bring up contextmenu with a left-mouse click ??</p>
+<p>Thanks</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13879" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13879', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13879-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13879" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13879', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13879-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13879" username="Alfred" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13880" class="dw">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/commentLogo.png" realsrc="/wp-content/themes/klass/img/commentLogo.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://davidwalsh.name/" rel="external nofollow" class="url">David Walsh</a></span>
+					<!-- time -->
+					<span class="commentTime">on November 23, 2009 @ 6:54 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>@Alfred:  It’s the “trigger” option.  You’d want:</p>
+<p>trigger: ‘click’</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13880" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13880', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13880-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13880" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13880', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13880-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13880" username="David Walsh" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13888">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_005.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=7024c7d82730327fef65ad154b3b3fe2&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Alfred</span>
+					<!-- time -->
+					<span class="commentTime">on November 24, 2009 @ 6:45 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>ok, answering myself ;-)</p>
+<p>trigger: ‘click’,</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13888" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13888', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13888-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13888" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13888', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13888-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13888" username="Alfred" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-13889">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_005.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=7024c7d82730327fef65ad154b3b3fe2&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Alfred</span>
+					<!-- time -->
+					<span class="commentTime">on November 24, 2009 @ 6:46 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>LOL – Thanks – i see you answered same :-)</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-13889" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('13889', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-13889-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-13889" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('13889', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-13889-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="13889" username="Alfred" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-17169">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_015.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=7edd874e7a6a6e24f4c4448acfa74784&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.nerosolutions.com/" rel="external nofollow" class="url">Stanley Ngumo</a></span>
+					<!-- time -->
+					<span class="commentTime">on April 19, 2010 @ 9:32 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi,</p>
+<p>I havent tried it out but I would like to know if this menu can be 
+initialized many times on one page on different objects i.e. on right 
+click, a different menu (with varying links on it) based on which 
+objects is right clicked.</p>
+<p>Thanx</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-17169" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('17169', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-17169-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-17169" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('17169', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-17169-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="17169" username="Stanley Ngumo" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-17217">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_009.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ff756df96e0f10123a157214c80ef53f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Nestor</span>
+					<!-- time -->
+					<span class="commentTime">on April 22, 2010 @ 4:19 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Thanks for the plugin. That works magic. The only thing I would
+ like to add is to being able to specify not only element type, but 
+perhaps a class. For example, a page may have a myriad of links , but 
+what if I only want to attach the menu to those belonging to a specific 
+class, eg <a href="#" rel="nofollow">…<br>
+How can I do that?<br>
+Thx again!</a></p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-17217" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('17217', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-17217-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-17217" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('17217', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-17217-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="17217" username="Nestor" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-17219">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_009.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ff756df96e0f10123a157214c80ef53f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Nestor</span>
+					<!-- time -->
+					<span class="commentTime">on April 22, 2010 @ 5:11 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Just figured out how to do that myself.</p>
+<p>Imagine our HTML document has the following two spans:<br>
+…<br>
+ Click me<br>
+ Click me<br>
+….</p>
+<p>in your initilaising javascript provide the target in the following format:</p>
+<p>	targets: ‘span.mif-tree-name’, //menu only available on spans of classs mif-tree-name</p>
+<p>then, modify your menu.js so that the “startListener” function is as follows:</p>
+<p>//get things started<br>
+	startListener: function() {<br>
+		/* all elements */<br>
+		this.targets.each(function(el) {<br>
+			// =&gt; Array of links with given class. Provide target in the form: ‘a.external’, where ‘external’ is a class name<br>
+			matchingTargets = $$(el);<br>
+			/* show the menu */<br>
+			matchingTargets.addEvent(this.options.trigger,function(e) {<br>
+				//enabled?<br>
+				if(!this.options.disabled) {<br>
+					//prevent default, if told to<br>
+					if(this.options.stopEvent) { e.stop(); }<br>
+					//record this as the trigger<br>
+					this.options.element = $(el);<br>
+					//position the menu<br>
+					this.menu.setStyles({<br>
+						top: (e.page.y + this.options.offsets.y),<br>
+						left: (e.page.x + this.options.offsets.x),<br>
+						position: ‘absolute’,<br>
+						‘z-index’: ’2000′<br>
+					});<br>
+					//show the menu<br>
+					this.show();<br>
+				}<br>
+			}.bind(this));<br>
+		},this);</p>
+<p>		/* menu items */<br>
+		this.menu.getElements(‘a’).each(function(item) {<br>
+			item.addEvent(‘click’,function(e) {<br>
+				if(!item.hasClass(‘disabled’)) {<br>
+					this.execute(item.get(‘href’).split(‘#’)[1],$(this.options.element));<br>
+					this.fireEvent(‘click’,[item,e]);<br>
+				}<br>
+			}.bind(this));<br>
+		},this);</p>
+<p>		//hide on body click<br>
+		$(document.body).addEvent(‘click’, function() {<br>
+			this.hide();<br>
+		}.bind(this));<br>
+	},</p>
+<p>All the magic is done in these few lines: </p>
+<p>		/* all elements */<br>
+		this.targets.each(function(el) {<br>
+			// =&gt; Array of links with given class. Provide target in the form: ‘a.external’, where ‘external’ is a class name<br>
+			matchingTargets = $$(el);<br>
+			/* show the menu */<br>
+			matchingTargets.addEvent(this.options.trigger,function(e) {</p>
+<p>Enjoy!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-17219" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('17219', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-17219-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-17219" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('17219', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-17219-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="17219" username="Nestor" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-17221">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_009.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ff756df96e0f10123a157214c80ef53f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Nestor</span>
+					<!-- time -->
+					<span class="commentTime">on April 22, 2010 @ 5:17 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Oh, dear, my HTML code got parsed…<br>
+What I wanted to say was:</p>
+<p>imagine you have two spans: (I replaced “” with “@”)</p>
+<p>@span class=”mif-tree-name”@ Click me @/span@<br>
+@span class=”some-class”@ Click me @/span@</p>
+<p>Then if you do as described above, only the first span will have the 
+JS context menu attached; the second one will have browser-default 
+context menu</p>
+<p>Regards</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-17221" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('17221', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-17221-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-17221" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('17221', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-17221-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="17221" username="Nestor" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-18123">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_004.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=5c67a9404936758c2612769bb477b79d&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">David Hinckle</span>
+					<!-- time -->
+					<span class="commentTime">on June 10, 2010 @ 12:46 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hi David,</p>
+<p>I’m attempting to use your contextMenu class yet again but have a 
+question. If I rightclick on a tr (targets: ‘tbody tr’), how do I get 
+the contextmenu to close when I mouseout of the same row? THANKS AGAIN!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-18123" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('18123', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-18123-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-18123" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('18123', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-18123-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="18123" username="David Hinckle" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-18345">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_014.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ef9a80a05c44f4ba274fc2ab14d14d9d&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://123doing.com/" rel="external nofollow" class="url">123doing</a></span>
+					<!-- time -->
+					<span class="commentTime">on June 21, 2010 @ 9:01 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>It’s very good.<br>
+I like this.<br>
+Thanks for share.<br>
+And I wrote something to introduce this project for my readers.<br>
+You can find the post about this in my website.<br>
+If something is wrong,pls figure it out.thanks.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-18345" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('18345', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-18345-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-18345" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('18345', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-18345-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="18345" username="123doing" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-18559">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_016.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=4e585e34875b6144c674abe7a6d0d117&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Niklas Lehto</span>
+					<!-- time -->
+					<span class="commentTime">on July 3, 2010 @ 7:16 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Brilliant! Have implemented this in a project I’m working on. 
+I’ve added some functionality to decide whether to position the menu 
+above or below and to the left or the right of the cursor, depending on 
+the size of the menu and the viewport. Hope someone finds it useful.</p>
+<p>//calculate height of the menu<br>
+menuSize = this.menu.measure(function(){<br>
+    return this.getSize();<br>
+});<br>
+//decide where to position the menu<br>
+posY =	((e.page.y + this.options.offsets.y + menuSize.y) &lt; window.getSize().y)<br>
+		? e.page.y + this.options.offsets.y<br>
+		: e.page.y – this.options.offsets.y – menuSize.y;<br>
+posX =	((e.page.x + this.options.offsets.x + menuSize.x) &lt; window.getSize().x)<br>
+		? e.page.x + this.options.offsets.x<br>
+		: e.page.x – this.options.offsets.x – menuSize.x;<br>
+//position the menu<br>
+this.menu.setStyles({<br>
+	top: posY,<br>
+	left: posX,<br>
+	position: 'absolute',<br>
+	'z-index': '2000'<br>
+});</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-18559" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('18559', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-18559-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-18559" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('18559', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-18559-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="18559" username="Niklas Lehto" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-18560">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_016.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=4e585e34875b6144c674abe7a6d0d117&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Niklas Lehto</span>
+					<!-- time -->
+					<span class="commentTime">on July 3, 2010 @ 7:22 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Btw, it’s tested to work in recent PC versions of Firefox, Explorer, Chrome, Opera and Safari.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-18560" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('18560', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-18560-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-18560" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('18560', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-18560-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="18560" username="Niklas Lehto" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-18578">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_016.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=4e585e34875b6144c674abe7a6d0d117&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Niklas Lehto</span>
+					<!-- time -->
+					<span class="commentTime">on July 5, 2010 @ 1:54 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>One further revision. I found myself in need of adding and 
+removing trigger items, so I added two methods providing this 
+functionality, and broke another method up in two. Here are the changes 
+(with my previous revisions included):</p>
+<p>	//get things started<br>
+	startListener: function(){<br>
+		//all elemnts<br>
+		this.attachToTargets(this.targets);</p>
+<p>		//menu items<br>
+		this.menu.getElements(‘a’).each(function(item){<br>
+			item.addEvent(‘click’,function(e){<br>
+				if(!item.hasClass(‘disabled’)){<br>
+					this.execute(item.get(‘href’).split(‘#’)[1],document.id(this.options.element));<br>
+					this.fireEvent(‘click’,[item,e]);<br>
+				}<br>
+			}.bind(this));<br>
+		},this);</p>
+<p>		//hide on body click<br>
+		document.id(document.body).addEvents({<br>
+			‘click’: function(){<br>
+				this.hide();<br>
+			}.bind(this),<br>
+			‘contextmenu’: function(){<br>
+				this.hide();<br>
+			}.bind(this)<br>
+		});<br>
+	},</p>
+<p>	// add trigger event to all targets<br>
+	attachToTargets: function(targets){<br>
+		targets.each(function(el){<br>
+			//show the menu<br>
+			el.addEvent(this.options.trigger,function(e){<br>
+				//enabled?<br>
+				if(!this.options.disabled){<br>
+					//prevent default, if told to<br>
+					if(this.options.stopEvent) { e.stop(); }<br>
+					//record this as the trigger<br>
+					this.options.element = document.id(el);<br>
+					//calculate height of the menu<br>
+					menuSize = this.menu.measure(function(){<br>
+					    return this.getSize();<br>
+					});<br>
+					//decide where to position the menu<br>
+					posY =	((e.page.y + this.options.offsets.y + menuSize.y) &lt; window.getSize().y)<br>
+							? e.page.y + this.options.offsets.y<br>
+							: e.page.y – this.options.offsets.y – menuSize.y;<br>
+					posX =	((e.page.x + this.options.offsets.x + menuSize.x) &lt; window.getSize().x)<br>
+							? e.page.x + this.options.offsets.x<br>
+							: e.page.x – this.options.offsets.x – menuSize.x;<br>
+					//position the menu<br>
+					this.menu.setStyles({<br>
+						top: posY,<br>
+						left: posX,<br>
+						position: 'absolute',<br>
+						'z-index': '2000'<br>
+					});<br>
+					//show the menu<br>
+					this.show();<br>
+				}<br>
+			}.bind(this));<br>
+		},this);<br>
+	},</p>
+<p>	//add item(s)<br>
+	addItems: function(items){<br>
+		this.attachToTargets($$(items));<br>
+	},</p>
+<p>	//remove item(s)<br>
+	removeItems: function(items){<br>
+		$$(items).removeEvents(this.options.trigger);<br>
+	},</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-18578" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('18578', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-18578-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-18578" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('18578', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-18578-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="18578" username="Niklas Lehto" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-21026">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_007.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=3e24101ad92ea0644135aa5fb7ea80c6&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Ann</span>
+					<!-- time -->
+					<span class="commentTime">on October 17, 2010 @ 3:13 am</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>fuction contextdemo()<br>
+{<br>
+alert(“hi”);<br>
+var menu=contextMenu.createElement(‘menu’);<br>
+var itemNode=contextMenu.createElement(‘item’);<br>
+var itemtext=contextMenu.createTextNode(“search”);<br>
+var itemattr=contextMenu.createAttribute(‘onactivate’);<br>
+itemtext.appendChild(itemattr);<br>
+itemNode.appendChild(itemtext);<br>
+menu.appendChild(itemNode);</p>
+<p>}</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-21026" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('21026', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-21026-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-21026" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('21026', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-21026-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="21026" username="Ann" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-21064">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_008.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=742f39d04f6bfb805a1b8ad5ae3accad&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Roman</span>
+					<!-- time -->
+					<span class="commentTime">on October 21, 2010 @ 1:42 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Hello folks</p>
+<p>The following code works fine for me to reinitialize the context menu:</p>
+<p><code style="display: none;" class="js">&lt;br&gt;
+context.targets.removeEvents('contextmenu');<br>
+context.targets = $$('.myNewTargets');<br>
+context.menu.getElements('a').removeEvents('click');<br>
+context.startListener();</code><pre class="standardLighter twilightLighter"><a class="codeCopy" href="javascript:;">copy</a><span class="sy0">&lt;</span>br<span class="sy0">&gt;</span>
+context.<span class="me0">targets</span>.<span class="me0">removeEvents</span><span class="br0">(</span><span class="st0">'contextmenu'</span><span class="br0">)</span><span class="sy0">;</span><span class="sy0">&lt;</span>br<span class="sy0">&gt;</span>
+context.<span class="me0">targets</span> <span class="sy0">=</span> $$<span class="br0">(</span><span class="st0">'.myNewTargets'</span><span class="br0">)</span><span class="sy0">;</span><span class="sy0">&lt;</span>br<span class="sy0">&gt;</span>
+context.<span class="me0">menu</span>.<span class="me0">getElements</span><span class="br0">(</span><span class="st0">'a'</span><span class="br0">)</span>.<span class="me0">removeEvents</span><span class="br0">(</span><span class="st0">'click'</span><span class="br0">)</span><span class="sy0">;</span><span class="sy0">&lt;</span>br<span class="sy0">&gt;</span>
+context.<span class="me0">startListener</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span></pre></p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-21064" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('21064', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-21064-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-21064" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('21064', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-21064-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="21064" username="Roman" class="commentReply" href="">Reply</a></li>
+
+				<li id="comment-22842">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar.jpeg" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=37d4072cb200a4a9e0d8ac829c22c10f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName">Greg Clout</span>
+					<!-- time -->
+					<span class="commentTime">on February 23, 2011 @ 5:24 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>Fantastic component!<br>
+The only trouble im having at present is that the click event is conflicting with the sortables class.<br>
+After opening the menu I can no loger drag and drop in my sortable lists.</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-22842" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('22842', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-22842-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-22842" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('22842', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-22842-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<ul class="children">
+
+				<li id="comment-23358">
+					<!-- avatar -->
+					<img src="mootools-context-menu_files/avatar_019.png" realsrc="http://www.gravatar.com/avatar.php?gravatar_id=ba0f39110a56b8e400ca5deefcbb740f&amp;size=48&amp;rating=G&amp;default=http://davidwalsh.name/wp-content/themes/klass/img/anon.png" alt="Commenter" class="commentAvatar">
+					<!-- name -->
+					<span class="commentName"><a href="http://www.niklaslehto.se/" rel="external nofollow" class="url">Niklas Lehto</a></span>
+					<!-- time -->
+					<span class="commentTime">on April 4, 2011 @ 9:32 pm</span>
+					<!-- comment content -->
+					<div class="commentContent">
+						<p>The context menu is not to blame for breaking the sortable class. There’s a bug in v1.2.4.4 of the sortables class itself.</p>
+<p>For details and a solution, check out <a href="https://mootools.lighthouseapp.com/projects/24057/tickets/292-sortables-breaking-on-right-clicking-mouse-button2-the-handle" rel="nofollow">https://mootools.lighthouseapp.com/projects/24057/tickets/292-sortables-breaking-on-right-clicking-mouse-button2-the-handle</a></p>
+<p>Good luck!</p>
+
+					</div>
+					<div class="commentThumbs">
+					 <img style="padding: 0px; border: medium none; cursor: pointer;" id="up-23358" src="mootools-context-menu_files/1_14_up.png" alt="Thumb up" onclick="javascript:ckratingKarma('23358', 'add', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_');" title="Thumb up"> <span id="karma-23358-up" style="font-size: 12px; color: rgb(0, 153, 51);">0</span>&nbsp;<img style="padding: 0px; border: medium none; cursor: pointer;" id="down-23358" src="mootools-context-menu_files/1_14_down.png" alt="Thumb down" onclick="javascript:ckratingKarma('23358', 'subtract', 'davidwalsh.name/wp-content/plugins/comment-rating/', '1_14_')" title="Thumb down"> <span id="karma-23358-down" style="font-size: 12px; color: rgb(153, 0, 51);">0</span>
+					</div>
+			<a commentid="23358" username="Niklas Lehto" class="commentReply" href="">Reply</a></li>
+</ul>
+<a commentid="22842" username="Greg Clout" class="commentReply" href="">Reply</a></li>
+</ol>
+
+<h2 class="noprint">Join the Discussion!</h2>
+<p class="noprint">Share your thoughts without being a jerk!  And wrap your code in <code>&lt;code&gt;</code> tags, <span style="color: rgb(255, 0, 0);">f00</span>!</p>
+
+<!-- original comment placeholder -->
+<div id="commentFormHolder">
+	
+	<!-- this will move around -->
+	<div id="commentFormMobileHolder">
+		<form action="/wp-comments-post.php" id="commentForm" method="post">
+			<table width="95%" cellpadding="0" cellspacing="3">
+								<tbody><tr>
+					<td width="25">Name*:</td><td width="400"><input placeholder="Your Name" id="author" name="author" tabindex="1" size="45" maxlength="50" required="required" type="text"></td>
+				</tr>
+				<tr>
+					<td width="25">Email*:</td><td width="400"><input placeholder="Your Email Address" id="email" name="email" tabindex="2" size="45" maxlength="50" required="required" type="email"></td>
+				</tr>
+				<tr>
+					<td width="25">Website:&nbsp;&nbsp;</td><td width="400"><input placeholder="Your Website" id="url" name="url" tabindex="3" size="45" maxlength="100" type="url"></td>
+				</tr>
+								<tr>
+					<td colspan="2">
+						<textarea id="comment" name="comment" tabindex="4" required="required"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="10af3dfee5" type="hidden"></p>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox">
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+						<noscript>
+							<style type="text/css">#submit{visibility:visible;}</style>
+						</noscript>
+						
+						
+						
+						<a id="commentDock" href="javascript:;">Dock Bottom</a><input id="submit" name="submit" value="Post Comment!" tabindex="5" style="margin-left: 0pt;" type="submit">
+						<input name="comment_post_ID" value="966" type="hidden">
+						<input id="comment_parent" name="comment_parent" value="" type="hidden">
+					</td>
+				</tr>
+			</tbody></table>
+		</form>
+	</div>
+</div>
+		
+		
+	<!-- /left side post content -->
+
+</div>
+
+<!-- right content -->
+<div id="homeContentRight">
+	
+	<!-- reset -->
+	<div style="visibility: visible; opacity: 1;" class="contentRightColumn" id="contentRightColumn"><!-- follow -->
+<span class="sidebarHeader">Follow Me</span><br>
+<a href="http://feeds2.feedburner.com/Bludice" class="socialIcon" id="socialIconRss">David Walsh Blog RSS</a>
+<a href="http://twitter.com/davidwalshblog" class="socialIcon" id="socialIconTwitter">David Walsh RSS</a>
+<a href="mailto:david@davidwalsh.name" class="socialIcon" id="socialIconGmail">David Walsh Email</a>
+<a href="skype:davidwalsh83?chat" class="socialIcon" id="socialIconSkype">David Walsh Skype</a>
+<a href="http://www.facebook.com/pages/David-Walsh-Blog/186644584869" class="socialIcon" id="socialIconFacebook">Facebook</a>
+<a href="http://linkedin.com/in/davidjameswalsh" class="socialIcon" id="socialIconLinkedIn">Linked In</a>
+
+<!-- topics -->
+<div class="middleContentBlock tagLinks">
+	<span class="sidebarHeader">Trending Topics</span><br>
+	<a href="http://davidwalsh.name/tutorials/mootools">MooTools</a>
+	<a href="http://davidwalsh.name/tutorials/dojo">Dojo</a>
+	<a href="http://davidwalsh.name/tutorials/jquery">jQuery</a><br>
+	<a href="http://davidwalsh.name/tutorials/mobile">Mobile</a>
+	<a href="http://davidwalsh.name/tutorials/css">CSS</a>
+	<a href="http://davidwalsh.name/tutorials/php">PHP</a><br>
+	<a href="http://davidwalsh.name/tutorials/javascript">JavaScript</a>
+	<a href="http://davidwalsh.name/tutorials/html5">HTML5</a>
+</div></div>
+	<div style="visibility: visible; opacity: 1;" class="contentRightColumn contentRightColumnRight">
+		<div id="bsap_1255973" class="bsap_1255973 bsap"><a href="http://stats.buysellads.com/click.go?z=1255973&amp;b=901498&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.44983129166796143&amp;link=http://cmsexpo.net" onmouseover="window.status = 'http://cmsexpo.net'; return true;" onmouseout="window.status=''; return true;" class="ad1 odd" title="You're Invited to Attend the 2011 CMS Expo in Chicago, May 2, 3, 4, 2011" id="bsa_901498" target="_blank"><img src="mootools-context-menu_files/54601-1300747287.gif" alt="You're Invited to Attend the 2011 CMS Expo in Chicago, May 2, 3, 4, 2011" height="125" width="200"></a></div>
+	</div>
+	
+	<!-- ads -->
+	<div style="visibility: visible; opacity: 1;" id="rightAds">
+		<div id="bsap_1236348" class="bsap_1236348 bsap"><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=562216&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.8922696465808392&amp;link=http://www.templatesold.com" onmouseover="window.status = 'http://www.templatesold.com'; return true;" onmouseout="window.status=''; return true;" class="ad1 odd" title="Premium WordPress Themes" id="bsa_562216" target="_blank"><img src="mootools-context-menu_files/32371-1280203450.jpg" alt="Premium WordPress Themes" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=695528&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.2470708808632892&amp;link=http://www.backlinkbuild.com" onmouseover="window.status = 'http://www.backlinkbuild.com'; return true;" onmouseout="window.status=''; return true;" class="ad2 even" title="45 PR5+ Backlinks $295" id="bsa_695528" target="_blank"><img src="mootools-context-menu_files/32238-1280104620.gif" alt="45 PR5+ Backlinks $295" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=1021873&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.5732619626132018&amp;link=http://www.bugrocket.com/?utm_source=davidwalsh&amp;utm_medium=banner&amp;utm_content=smallteam&amp;utm_campaign=BSATest" onmouseover="window.status = 'http://www.bugrocket.com/?utm_source=davidwalsh&amp;utm_medium=banner&amp;utm_content=smallteam&amp;utm_campaign=BSATest'; return true;" onmouseout="window.status=''; return true;" class="ad3 odd" title="your small team needs a small bug tracker " id="bsa_1021873" target="_blank"><img src="mootools-context-menu_files/55101-1301084387.png" alt="your small team needs a small bug tracker " height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=5251&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.9632944663662036&amp;link=http://www.tophosts.com/top25-page1.html?utm_source=davidwalshblog&amp;utm_medium=banner&amp;utm_content=125x125banner&amp;utm_campaign=davidwalshbanner" onmouseover="window.status = 'http://www.tophosts.com/top25-page1.html?utm_source=davidwalshblog&amp;utm_medium=banner&amp;utm_content=125x125banner&amp;utm_campaign=davidwalshbanner'; return true;" onmouseout="window.status=''; return true;" class="ad4 even" title="Top 25 Web Hosts" id="bsa_5251" target="_blank"><img src="mootools-context-menu_files/29347-1277217561.jpg" alt="Top 25 Web Hosts" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=333416&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.869990267099577&amp;link=http://codecanyon.net/codecanyon-competition?ref=bsa&amp;utm_source=ad&amp;utm_medium=banner&amp;utm_campaign=default" onmouseover="window.status = 'http://codecanyon.net/codecanyon-competition?ref=bsa&amp;utm_source=ad&amp;utm_medium=banner&amp;utm_campaign=default'; return true;" onmouseout="window.status=''; return true;" class="ad5 odd" title="CodeCanyon &amp; Nettuts 41,000$ Web Developer Competition" id="bsa_333416" target="_blank"><img src="mootools-context-menu_files/56104-1301932796.jpg" alt="CodeCanyon &amp; Nettuts 41,000$ Web Developer Competition" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=923173&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.8216929093940716&amp;link=http://www.whatfontis.com" onmouseover="window.status = 'http://www.whatfontis.com'; return true;" onmouseout="window.status=''; return true;" class="ad6 even" title="WhatFontis.com - Identify the font you are looking for!" id="bsa_923173" target="_blank"><img src="mootools-context-menu_files/48580-1295603854.jpg" alt="WhatFontis.com - Identify the font you are looking for!" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=277936&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.21926781600588408&amp;link=http://www.fusioncharts.com/php/?BS=BSA_DavidWalsh_Feb2010" onmouseover="window.status = 'http://www.fusioncharts.com/php/?BS=BSA_DavidWalsh_Feb2010'; return true;" onmouseout="window.status=''; return true;" class="ad7 odd" title="FusionCharts | Stunning Charts for your PHP applications" id="bsa_277936" target="_blank"><img src="mootools-context-menu_files/14789-1265058126.jpg" alt="FusionCharts | Stunning Charts for your PHP applications" height="125" width="125"></a><a href="http://stats.buysellads.com/click.go?z=1236348&amp;b=881406&amp;g=&amp;s=&amp;sw=1440&amp;sh=900&amp;br=firefox,3.6,linux&amp;r=0.20591125439720226&amp;link=https://www.cloudkick.com/developers/?utm_source=BuySellDWalsh&amp;utm_medium=banners&amp;utm_campaign=BuySellDWalsh" onmouseover="window.status = 'https://www.cloudkick.com/developers/?utm_source=BuySellDWalsh&amp;utm_medium=banners&amp;utm_campaign=BuySellDWalsh'; return true;" onmouseout="window.status=''; return true;" class="ad8 even" title="Cloudkick Free Cloud Monitoring" id="bsa_881406" target="_blank"><img src="mootools-context-menu_files/54016-1300303206.jpg" alt="Cloudkick Free Cloud Monitoring" height="125" width="125"></a><a href="http://buysellads.com/buy/detail/1687/zone/1236348?utm_source=site_1687_zone_1236348&amp;utm_medium=website&amp;utm_campaign=adhere" title="Advertise Here" class="adhere ad9 odd" target="_blank">Advertise Here</a></div>
+		<div class="clearfix"></div>
+	</div>
+	
+	<!-- twitter -->
+	<div style="visibility: visible; opacity: 1;" id="tweetsContainer">
+		<span class="sidebarHeader">@davidwalshblog Tweets</span>
+		<ul id="tweetsList"><li><a href="http://twitter.com/BrianWalshFooty">@BrianWalshFooty</a> re: Chelsea.  hahaha.  <a href="http://t.co/bVV9HFu">http://t.co/bVV9HFu</a></li><li>Listening to Coldplay.  No, it's OK, it's on vinyl.</li><li><a href="http://twitter.com/samfosteriam">@samfosteriam</a> I'd rather live there than here. #<a href="http://search.twitter.com/search?q=%23arsenal">arsenal</a> #<a href="http://search.twitter.com/search?q=%23theoffice">theoffice</a> #<a href="http://search.twitter.com/search?q=%23oasis">oasis</a> #<a href="http://search.twitter.com/search?q=%23rodstewart">rodstewart</a> #<a href="http://search.twitter.com/search?q=%23beingcheeky">beingcheeky</a> #<a href="http://search.twitter.com/search?q=%23jamesbond">jamesbond</a> #<a href="http://search.twitter.com/search?q=%23godsavethequeen">godsavethequeen</a></li><li>Just watched the new #<a href="http://search.twitter.com/search?q=%23BlackOps">BlackOps</a> maps preview video.  The look fucking awesome.</li></ul>
+	</div>
+	
+	
+	<!-- mt -->
+	<a style="visibility: visible; opacity: 1;" href="http://mediatemple.net/?utm_source=davidwalsh&amp;utm_medium=banner&amp;utm_content=davidwalsh390x75&amp;utm_campaign=davidwalsh.name" id="mtlink"><img src="mootools-context-menu_files/mt-234x60-lt__a484464.jpg" alt="Media Temple - Web Hosting"><br>Hosting by Media Temple</a>
+	
+	
+</div>
+
+<div class="clear"></div>
+</div>
+
+<!-- page footer -->
+<footer id="footer"><div class="center">
+
+	<div id="footer1">
+		<h5>David Walsh</h5>
+		<p>I am a 27 year old Web Developer and Front-End Developer in 
+Madison, Wisconsin. I am a Software Engineer for SitePen, the 
+prestigious JavaScript development shop. <a href="http://davidwalsh.name/about-david-walsh">More →</a></p>
+	</div>
+
+	<div>
+		<h5>About the Blog</h5>
+		<p>This blog is targeted toward all levels of web designers and developers. All web topics are discussed, including <a href="http://davidwalsh.name/tutorials/css">CSS</a>, <a href="http://davidwalsh.name/tutorials/javascript">JavaScript</a>  (<a href="http://davidwalsh.name/tutorials/mootools">MooTools</a>, <a href="http://davidwalsh.name/tutorials/dojo">Dojo</a>, and <a href="http://davidwalsh.name/tutorials/jquery">jQuery</a>), <a href="http://davidwalsh.name/tutorials/html5">HTML5</a>, <a href="http://davidwalsh.name/tutorials/php">PHP</a>, and ∞.</p>
+	</div>
+
+	<div class="footerLinks">
+		<h5>Press</h5>
+		<p>
+			<a href="http://css-tricks.com/five-questions-with-david-walsh/" rel="nofollow">CSS Tricks</a><a href="http://faceoffshow.com/2009/06/30/episode-23-david-walsh/" rel="nofollow">FaceOff Show</a><a href="http://blog.jquery.com/2010/02/26/the-official-jquery-podcast-episode-13-david-walsh/">jQuery Podcast</a><a href="http://net.tutsplus.com/articles/interviews/an-interview-with-david-walsh/" rel="nofollow">NetTuts</a><a href="http://www.popsci.com/gadgets/article/2010-03/inside-excruciatingly-slow-death-internet-explorer-6" rel="nofollow">Popular Science</a><a href="http://revision3.com/diggnation/2008-03-13latenight/" rel="nofollow" title="~20 Minutes In">DiggNation</a><a href="http://www.smashingmagazine.com/2009/07/28/mootools-tutorials-and-resources-round-up/" rel="nofollow">Smashing Magazine</a>
+		</p>
+	</div>
+
+	<div class="footerLinks">
+		<h5>Static</h5>
+		<p>
+			<a href="http://davidwalsh.name/about-david-walsh" title="Learn more about David Walsh">About Me</a><a href="http://davidwalsh.name/advertise" title="Advertise on the David Walsh Blog">Advertise</a> <a href="http://davidwalsh.name/chat" title="Chat with other MooTools, jQuery, CSS, and PHP fans">Chat</a><a href="http://davidwalsh.name/contact" title="Contact David Walsh">Contact Me</a><a href="http://davidwalsh.name/demos" title="Check out demos of my posts">Demos</a><a href="http://github.com/darkwing">GitHub</a><a href="http://davidwalsh.name/js" title="Grab MooTools plugins like ScrollSpy, LazyLoad, and Dotter">Moo Plugins</a><a href="http://davidwalsh.name/network">Network</a><a href="http://davidwalsh.name/post-archive" title="View a list of all of my posts">Post Archive</a><a href="http://davidwalsh.name/web-development-tools" title=".htaccess generator, CSS, JS, HTML Compressors">Web Tools</a>
+		</p>
+	</div>
+	
+	<br class="clear">
+</div></footer>
+
+</div> <!--! end of #container -->
+
+<!-- JavaScript at the bottom for fast page loading -->
+<script src="mootools-context-menu_files/require.js"></script>
+<script src="mootools-context-menu_files/jsapi"></script>
+<script>
+	// Load MooTools, Google Search, and ChromeFrame
+	function loadScripts() { require(["http://davidwalsh.name/wp-content/themes/klass/js/script.js"]); }
+	google.load("mootools","1.3.0");
+	if('\v' == 'v') { // Chrome Frame for IE
+		google.load("chrome-frame", "1.0.2");
+	}
+	google.load("search","1");
+	google.setOnLoadCallback(loadScripts);
+</script><script src="mootools-context-menu_files/mootools-yui-compressed.js" type="text/javascript"></script><script src="mootools-context-menu_files/a" type="text/javascript"></script><link href="mootools-context-menu_files/default.css" type="text/css" rel="stylesheet"><script src="mootools-context-menu_files/defaultes.js" type="text/javascript"></script>
+<script>
+var _gaq=[["_setAccount","UA-2087880-2"],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Minified using disk
+Page Caching using disk (enhanced)
+Database Caching 2/13 queries in 0.009 seconds using disk
+Object Caching 5375/5441 objects using disk
+
+Served from: davidwalsh.name @ 2011-04-20 19:53:44 --><div style="position: absolute; left: 810px; top: 506px; width: 40px; height: 16px; z-index: 99;" title="Click to copy to clipboard"><embed id="ZeroClipboardMovie_1" src="mootools-context-menu_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=40&amp;height=16" wmode="transparent" height="16" width="40" align="middle"></div><div style="position: absolute; left: 810px; top: 783px; width: 40px; height: 16px; z-index: 99;" title="Click to copy to clipboard"><embed id="ZeroClipboardMovie_2" src="mootools-context-menu_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_2" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=40&amp;height=16" wmode="transparent" height="16" width="40" align="middle"></div><div style="position: absolute; left: 824px; top: 1152px; width: 36px; height: 15px; z-index: 99;" title="Click to copy to clipboard"><embed id="ZeroClipboardMovie_3" src="mootools-context-menu_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_3" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=36&amp;height=15" wmode="transparent" height="15" width="36" align="middle"></div><div style="position: absolute; left: 824px; top: 3742px; width: 36px; height: 15px; z-index: 99;" title="Click to copy to clipboard"><embed id="ZeroClipboardMovie_4" src="mootools-context-menu_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_4" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&amp;width=36&amp;height=15" wmode="transparent" height="15" width="36" align="middle"></div><div style="position: absolute; left: 734px; top: 16978px; width: 36px; height: 25px; z-index: 99;" title="Click to copy to clipboard"><embed id="ZeroClipboardMovie_5" src="mootools-context-menu_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_5" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&amp;width=36&amp;height=25" wmode="transparent" height="25" width="36" align="middle"></div></body></html>

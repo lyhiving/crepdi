@@ -1,0 +1,786 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+
+
+
+
+
+
+  <title>ContextMenu plugin</title>
+
+  <link rel="stylesheet" type="text/css" href="ContextMenu%20plugin_files/page_style.css">
+
+  <script type="text/javascript" src="ContextMenu%20plugin_files/jquery-1.js"></script>
+
+  <script type="text/javascript" src="ContextMenu%20plugin_files/jquery.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+
+
+      $('span.demo1').contextMenu('myMenu1', {
+
+        bindings: {
+
+          'open': function(t) {
+
+            alert('Trigger was '+t.id+'\nAction was Open');
+
+          },
+
+          'email': function(t) {
+
+            alert('Trigger was '+t.id+'\nAction was Email');
+
+          },
+
+          'save': function(t) {
+
+            alert('Trigger was '+t.id+'\nAction was Save');
+
+          },
+
+          'delete': function(t) {
+
+            alert('Trigger was '+t.id+'\nAction was Delete');
+
+          }
+
+        }
+
+      });
+
+
+
+      $('#demo2').contextMenu('myMenu2', {
+
+        menuStyle: {
+
+          border: '2px solid #000'
+
+        },
+
+        itemStyle : {
+
+          fontFamily: 'verdana',
+
+          backgroundColor: '#666',
+
+          color: 'white',
+
+          border: 'none',
+
+          padding: '1px'
+
+        },
+
+        itemHoverStyle: {
+
+          color: '#fff',
+
+          backgroundColor: '#0f0',
+
+          border: 'none'
+
+        }
+
+      });
+
+
+
+      $('span.demo3').contextMenu('myMenu3', {
+
+        onContextMenu: function(e) {
+
+          if ($(e.target).attr('id') == 'dontShow') return false;
+
+          else return true;
+
+        },
+
+        onShowMenu: function(e, menu) {
+
+          if ($(e.target).attr('id') == 'showOne') {
+
+            $('#item_2, #item_3', menu).remove();
+
+          }
+
+          return menu;
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+</head><body>
+
+
+
+  <h1>ContextMenu plugin</h1>
+
+
+
+  <p><i><b>ContextMenu</b> is a lightweight jQuery plugin that lets you selectively override the
+
+    browser's right-click menu with a custom one of your own.</i>
+
+  </p>
+
+
+
+  <div style="display: none;" class="contextMenu" id="myMenu1">
+
+    <ul>
+
+      <li id="open"><img src="ContextMenu%20plugin_files/folder.png"> Open</li>
+
+      <li id="email"><img src="ContextMenu%20plugin_files/email.png"> Email</li>
+
+      <li id="save"><img src="ContextMenu%20plugin_files/disk.png"> Save</li>
+
+      <li id="delete"><img src="ContextMenu%20plugin_files/cross.png"> Delete</li>
+
+    </ul>
+
+  </div>
+
+  <div style="display: none;" class="contextMenu" id="myMenu2">
+
+    <ul>
+
+      <li id="item_1">Item 1</li>
+
+      <li id="item_2">Item 2</li>
+
+      <li id="item_3">Item 3</li>
+
+      <li id="item_4">Item 4</li>
+
+      <li id="item_5">Item 5</li>
+
+      <li id="item_6">Item 6</li>
+
+      <li id="item_7">Item 7</li>
+
+      <li id="item_8">Item 8</li>
+
+    </ul>
+
+  </div>
+
+  <div style="display: none;" class="contextMenu" id="myMenu3">
+
+    <ul>
+
+      <li id="item_1">Item 1</li>
+
+      <li id="item_2">Item 2</li>
+
+      <li id="item_3">Item 3</li>
+
+    </ul>
+
+  </div>
+
+
+
+  <span class="demo1" id="quickDemo" style="float: right; border: 1px solid rgb(136, 136, 136);">
+
+    <b>DEMO</b> right-click me!!
+
+  </span>
+
+
+
+  <h2>Features</h2>
+
+  <ul>
+
+    <li>Use multiple menus on one page</li>
+
+    <li>Menus can be bound to multiple elements</li>
+
+    <li>Fully stylable</li>
+
+    <li>Assign context-sensitive callbacks</li>
+
+  </ul>
+
+
+
+  <h2>Current Version</h2>
+
+  <table>
+
+    <tbody><tr>
+
+      <th>Version</th>
+
+      <td>r2</td>
+
+    </tr>
+
+    <tr>
+
+      <th>Released</th>
+
+      <td>16 July 2007</td>
+
+    </tr>
+
+    <tr>
+
+      <th>Author</th>
+
+      <td>Chris Domigan <i>(cdomigan at gmail dot com)</i></td>
+
+    </tr>
+
+    <tr>
+
+      <th>Contributors</th>
+
+      <td>Dan G. Switzer, II</td>
+
+    </tr>
+
+    <tr>
+
+      <th>Download</th>
+
+      <td>
+
+        <a href="http://www.trendskitchens.co.nz/jquery/contextmenu/jquery.contextmenu.r2.js">Source js file</a> (4.3 KB)<br>
+
+        <a href="http://www.trendskitchens.co.nz/jquery/contextmenu/jquery.contextmenu.r2.packed.js">Compressed js file</a> (2.5 KB)
+
+      </td>
+
+    </tr>
+
+    <tr>
+
+      <th>Requires</th>
+
+      <td><a href="http://www.jquery.com/">jQuery</a> v1.1 or greater</td>
+
+    </tr>
+
+    <tr>
+
+      <th>Supports</th>
+
+      <td>
+
+        Firefox 1.5+<br>
+
+        Internet Explorer 6.0+
+
+      </td>
+
+  </tr></tbody></table>
+
+
+
+  <h2>Changelog</h2>
+
+  <ul>
+
+    <li><b>r2</b> - 16 July 2007
+
+      <ul>
+
+        <li>Defaults now correctly applied</li>
+
+        <li>Added <i>shadow</i>, <i>eventPosX</i>, <i>eventPosY</i>, <i>onContextMenu</i> and <i>onShowMenu</i> options</li>
+
+        <li>Many of these changes care of Dan G. Switzer, II. Thanks Dan!</li>
+
+      </ul>
+
+    </li>
+
+    <li><b>r1</b> - 9 March 2007
+
+      <ul>
+
+        <li>First release</li>
+
+      </ul>
+
+    </li>
+
+  </ul>
+
+
+
+  <h2>Usage</h2>
+
+  <p>
+
+    $(<i>elements</i>).contextMenu(String <i>menu_id</i> [, Object <i>settings</i>]);
+
+  </p>
+
+  <p>
+
+    You define your menu structure in your HTML markup. For each menu, place an unordered list
+
+    in a div with class "contextMenu" and the id you will refer to it by (see the examples). The div can be placed anywhere
+
+    as it will automatically be hidden by the plugin.
+
+    <br>You can have as many menus defined on a page as you like.
+
+    Each &lt;li&gt; element will act as an option on the menu. Give each &lt;li&gt; a unique id so that
+
+    actions can be bound to it.
+
+    <br><i>Note: ContextMenu does not currently support nested menus. This feature may be in an upcoming release.</i>
+
+  </p>
+
+  <h2>Parameters</h2>
+
+  <h3>menu_id</h3>
+
+  <p>
+
+    The id of the menu as defined in your markup.
+
+    You can bind one or more elements to a menu. Eg <code>$("table td").contextMenu("myMenu")</code> will bind the menu with id "myMenu" to
+
+    all table cells. <br>
+
+    <i style="color: red;">Note: This behaviour has changed from r1 where you needed a "#" before the id</i>
+
+  </p>
+
+  <h3>settings</h3>
+
+  <p>
+
+    ContextMenu takes an optional settings object that lets you style your menu and bind click handlers to each option.
+
+    ContextMenu supports the following properties in the settings object:
+
+    </p><dl>
+
+      <dt>bindings</dt>
+
+      <dd>
+
+        An object containing "id":function pairs. The supplied function is the action to be performed when the associated
+
+        item is clicked. The element that triggered the current menu is passed to this
+
+        handler as the first parameter.
+
+        <br>
+
+        <i style="color: red;">Note: This behaviour has changed from r1 where you needed a "#" before the id</i>
+
+      </dd>
+
+      <dt>menuStyle</dt>
+
+      <dd>
+
+        An object containing styleName:value pairs for styling the containing &lt;ul&gt; menu.
+
+      </dd>
+
+      <dt>itemStyle</dt>
+
+      <dd>
+
+        An object containing styleName:value pairs for styling the &lt;li&gt; elements.
+
+      </dd>
+
+      <dt>itemHoverStyle</dt>
+
+      <dd>
+
+        An object containing styleName:value pairs for styling the hover behaviour of &lt;li&gt; elements.
+
+      </dd>
+
+      <dt>shadow</dt>
+
+      <dd>
+
+        Boolean: display a basic drop shadow on the menu.
+
+        <br>
+
+        <i style="color: green;">Defaults to <b>true</b></i>
+
+      </dd>
+
+      <dt>eventPosX</dt>
+
+      <dd>
+
+        Allows you to define which click event is used to determine where to place the menu. There are possibly times
+
+        (particularly in IE6) where you will need to set this to "clientX".
+
+        <br>
+
+        <i style="color: green;">Defaults to: 'pageX'</i>
+
+      </dd>
+
+      <dt>eventPosY</dt>
+
+      <dd>
+
+        Allows you to define which click event is used to determine where to place the menu. There are possibly times
+
+        (particularly in IE6) where you will need to set this to "clientY".
+
+        <br><i style="color: green;">Defaults to: 'pageY'</i>
+
+      </dd>
+
+      <dt>onContextMenu(<i>event</i>)</dt>
+
+      <dd>
+
+        A custom event function which runs before the context menu is displayed. If the function returns
+
+        false the menu is not displayed. This allows you to attach the context menu
+
+        to a large block element (or the entire document) and then filter on right
+
+        click whether or not the context menu should be shown.
+
+      </dd>
+
+      <dt>onShowMenu(<i>event</i>, <i>menu</i>)</dt>
+
+      <dd>
+
+        A custom event function which runs before the menu is displayed. It is passed a reference
+
+        to the menu element and allows you to manipulate the output before the
+
+        menu is shown. This allows you to hide/show options or anything else
+
+        you can think of before showing the context menu to the user. This function must return the menu.
+
+      </dd>
+
+    </dl>
+
+  
+
+  <h3>Changing defaults</h3>
+
+  <p>
+
+    In addition to passing style information for each menu via the settings object, you can extend the default options
+
+    for all menus by calling <b>$.contextMenu.defaults(settings)</b>. Every setting except <i>bindings</i> can be used as a default.
+
+    <br>
+
+    Example:
+
+    </p><pre>
+  $.contextMenu.defaults({
+
+    menuStyle : {
+
+      border : "2px solid green"
+
+    },
+
+    shadow: false,
+
+    onContextMenu: function(e) {
+
+      alert('Did someone asked for a context menu?!');
+
+    }
+
+  });</pre>
+
+  
+
+
+
+  <h2>Examples</h2>
+
+    <h3>Example 1 - Basic usage with bindings</h3>
+
+      <p>
+
+        <span class="demo1" id="demo1_yellow"><b>RIGHT CLICK FOR DEMO</b></span>
+
+        <span class="demo1" id="demo1_green" style="background-color: lightgreen;"><b>THIS WORKS TOO</b></span>
+
+      </p>
+
+      <h4>Html</h4>
+
+      <pre>
+    &lt;div class="contextMenu" id="myMenu1"&gt;
+
+      &lt;ul&gt;
+
+        &lt;li id="open"&gt;&lt;img src="folder.png" /&gt; Open&lt;/li&gt;
+
+        &lt;li id="email"&gt;&lt;img src="email.png" /&gt; Email&lt;/li&gt;
+
+        &lt;li id="save"&gt;&lt;img src="disk.png" /&gt; Save&lt;/li&gt;
+
+        &lt;li id="close"&gt;&lt;img src="cross.png" /&gt; Close&lt;/li&gt;
+
+      &lt;/ul&gt;
+
+    &lt;/div&gt;</pre>
+
+      <h4>Javascript</h4>
+
+  <pre>
+    $('span.demo1').contextMenu('myMenu1', {
+
+      bindings: {
+
+        'open': function(t) {
+
+          alert('Trigger was '+t.id+'\nAction was Open');
+
+        },
+
+        'email': function(t) {
+
+          alert('Trigger was '+t.id+'\nAction was Email');
+
+        },
+
+        'save': function(t) {
+
+          alert('Trigger was '+t.id+'\nAction was Save');
+
+        },
+
+        'delete': function(t) {
+
+          alert('Trigger was '+t.id+'\nAction was Delete');
+
+        }
+
+      }
+
+    });</pre>
+
+      <p>
+
+        The preceding code binds the context menu "myMenu1" to all span elements of class "demo1".
+
+      </p>
+
+
+
+  <h3>Example 2 - Basic styling </h3>
+
+    <p id="demo2" style="background-color: lightpink;">
+
+      Right clicking anywhere in this paragraph will trigger the context menu.
+
+    </p>
+
+    <h3>Html</h3>
+
+    <pre>
+  &lt;div class="contextMenu" id="myMenu2"&gt;
+
+    &lt;ul&gt;
+
+      &lt;li id="item_1"&gt;Item 1&lt;/li&gt;
+
+      &lt;li id="item_2"&gt;Item 2&lt;/li&gt;
+
+      &lt;li id="item_3"&gt;Item 3&lt;/li&gt;
+
+      &lt;li id="item_4"&gt;Item 4&lt;/li&gt;
+
+      &lt;!-- etc... --&gt;
+
+    &lt;/ul&gt;
+
+  &lt;/div&gt;</pre>
+
+    <h3>Javascript</h3>
+
+  <pre>
+    $('#demo2').contextMenu('myMenu2', {
+
+      menuStyle: {
+
+        border: '2px solid #000'
+
+      },
+
+      itemStyle: {
+
+        fontFamily : 'verdana',
+
+        backgroundColor : '#666',
+
+        color: 'white',
+
+        border: 'none',
+
+        padding: '1px'
+
+      },
+
+      itemHoverStyle: {
+
+        color: '#fff',
+
+        backgroundColor: '#0f0',
+
+        border: 'none'
+
+      }
+
+    });
+
+  </pre>
+
+    <p>
+
+      The preceding code binds the context menu "myMenu2" to the element with id "demo2".
+
+    </p>
+
+
+
+  <h3>Example 3 - Advanced usage with callbacks</h3>
+
+    <p style="font-weight: bold;">
+
+      <span class="demo3" id="dontShow" style="padding: 5px; background-color: pink;">Don't show menu</span>
+
+      <span class="demo3" id="showOne" style="padding: 5px; background-color: lightgreen;">Just first item</span>
+
+      <span class="demo3" id="showAll" style="padding: 5px; background-color: lightblue;">Show all</span>
+
+    </p>
+
+    <h3>Html</h3>
+
+    <pre>
+  &lt;div class="contextMenu" id="myMenu3"&gt;
+
+    &lt;ul&gt;
+
+      &lt;li id="item_1"&gt;Item 1&lt;/li&gt;
+
+      &lt;li id="item_2"&gt;Item 2&lt;/li&gt;
+
+      &lt;li id="item_3"&gt;Item 3&lt;/li&gt;
+
+    &lt;/ul&gt;
+
+  &lt;/div&gt;</pre>
+
+    <h3>Javascript</h3>
+
+  <pre>
+    $('span.demo3').contextMenu('myMenu3', {
+
+      onContextMenu: function(e) {
+
+        if ($(e.target).attr('id') == 'dontShow') return false;
+
+        else return true;
+
+      },
+
+      onShowMenu: function(e, menu) {
+
+        if ($(e.target).attr('id') == 'showOne') {
+
+          $('#item_2, #item_3', menu).remove();
+
+        }
+
+        return menu;
+
+      }
+
+    });
+
+  </pre>
+
+
+
+  <h2>Notes</h2>
+
+  <p>
+
+    It is worth noting that by overriding the browser's right click menu this plugin provides a
+
+    behaviour that is different from what most users will expect. This plugin may be best suited for
+
+    intranet web applications, where the developer is working in a more controlled environment.
+
+  </p>
+
+
+
+  <h2>Credits</h2>
+
+  <ul>
+
+    <li>
+
+      A big thanks to John Resig for creating jQuery, and to the excellent development team who continues
+
+      to make this the best javascript library in town.
+
+    </li>
+
+    <li>
+
+      Thanks also to Joern Zaefferer - his Tooltip plugin provided great insight and inspiration.
+
+    </li>
+
+    <li>
+
+      Dan G. Switzer, II, for his contributions
+
+    </li>
+
+  </ul>
+
+
+
+<div style="display: none; position: absolute; z-index: 500; left: 509px; top: 139px;" id="jqContextMenu"><ul style="list-style: none outside none; padding: 1px; margin: 0px; background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); width: 100px;">
+
+      <li style="margin: 0px; color: rgb(0, 0, 0); display: block; cursor: default; padding: 3px; border: 1px solid rgb(255, 255, 255); background-color: transparent;" id="open"><img style="vertical-align: middle; padding-right: 2px;" src="ContextMenu%20plugin_files/folder.png"> Open</li>
+
+      <li style="margin: 0px; color: rgb(0, 0, 0); display: block; cursor: default; padding: 3px; border: 1px solid rgb(255, 255, 255); background-color: transparent;" id="email"><img style="vertical-align: middle; padding-right: 2px;" src="ContextMenu%20plugin_files/email.png"> Email</li>
+
+      <li style="margin: 0px; color: rgb(0, 0, 0); display: block; cursor: default; padding: 3px; border: 1px solid rgb(255, 255, 255); background-color: transparent;" id="save"><img style="vertical-align: middle; padding-right: 2px;" src="ContextMenu%20plugin_files/disk.png"> Save</li>
+
+      <li style="margin: 0px; color: rgb(0, 0, 0); display: block; cursor: default; padding: 3px; border: 1px solid rgb(255, 255, 255); background-color: transparent;" id="delete"><img style="vertical-align: middle; padding-right: 2px;" src="ContextMenu%20plugin_files/cross.png"> Delete</li>
+
+    </ul></div><div style="background-color: rgb(0, 0, 0); position: absolute; opacity: 0.2; z-index: 499; display: none; width: 104px; height: 102px; left: 511px; top: 141px;"></div></body></html>

@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+        <!--<script type="text/javascript" src="pizarra.js"></script>-->
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery-ui.js"></script>
+        <script type="text/javascript">
+        var activarborrado = false;
+        var borrar = false;
+        var canvas1 ;
+        var context1 ;
+        function cambiarborrar()
+        {
+            activarborrado = true;
+        }
+        function cambiarcapa(numerocapa)
+        {
+            context1.lineWidth = numerocapa;
+            activarborrado = false;
+        }
+        function init()
+        {
+            canvas1 = document.getElementById("capa1");
+            context1 = canvas1.getContext("2d");
+            context1.strokeStyle = "#000";
+            context1.lineWidth = 100;
+            canvas1.addEventListener("mousedown",iniciarpintado,false);
+            canvas1.addEventListener("touchstart",iniciarpintado,false);
+            canvas1.addEventListener("mouseup",finpintado,false);
+            canvas1.addEventListener("touchmove",finpintado,false);
+            canvas1.addEventListener("mouseout",finpintado,false);
+            canvas1.addEventListener("touchend",finpintado,false)
+        }
+        function iniciarpintado(e)
+        {
+            if (activarborrado)
+            {
+                canvas1.addEventListener("mousemove",metborrar,false);
+                canvas1.addEventListener("touchmove",metborrar,false);
+                metborrar(e);
+            }
+            else{
+                context1.beginPath();
+                var x = e.clientX-canvas1.offsetLeft ;
+                var y = e.clientY-canvas1.offsetTop;
+                context1.moveTo(x,y);
+                canvas1.addEventListener("mousemove",pintar,false);
+                canvas1.addEventListener("touchmove",pintar,false);
+            }
+        }
+        function pintar(e)
+        {
+            var x = e.pageX-canvas1.offsetLeft ;
+            var y = e.pageY-canvas1.offsetTop;
+            context1.lineTo(x,y);
+            context1.stroke();
+        }
+        function metborrar(e)
+        {
+            var x = e.clientX-canvas1.offsetLeft ;
+            var y = e.clientY-canvas1.offsetTop;
+            context1.clearRect(x-5,y-5,10,10);
+        }
+        function finpintado(e)
+        {
+            if (activarborrado)
+            {
+                canvas1.removeEventListener("mousemove",metborrar,false);
+                canvas1.removeEventListener("touchmove",metborrar,false);
+            }
+            else
+            {
+                canvas1.removeEventListener("mousemove",pintar,false);
+                canvas1.removeEventListener("touchmove",pintar,false);
+            }
+        }
+        $(document).ready(
+          function ()
+          {
+            $('#capa1').attr("height",$(document).height()-40);
+            $('#capa2').attr("height",$(document).height()-40);
+            $('#capa1').attr("width",$(document).width()-20);
+            $('#capa2').attr("width",$(document).width()-20);
+            }
+        );
+        </script>
+    </head>
+    <body>
+        <div id="menu">
+            <ul>
+            <li><img onclick="cambiarcapa('1')" src="1.png" /></li>
+            <li><img onclick="cambiarcapa('10')" src="2.png" /></li>
+            <li><img onclick="cambiarborrar()" src="3.png" /></li>
+            </ul>
+        </div>
+        <button id="mostrar">Mostrar</button>
+        <script>
+            var aux = true;
+            $("#mostrar").click(function(){
+                
+                if (aux){
+                    $("div#menu").animate({height: "50px"}, 400 );
+                    aux = false;}
+                else{
+                    $("div#menu").animate({height: "0"}, 400 );
+                    aux = true;}
+});
+
+        </script>
+        <div>
+        <canvas id="capa1">Deberias utilizar un navegador que soporte HTML5</canvas>
+        <canvas id="capa2">Deberias utilizar un navegador que soporte HTML5</canvas>
+        </div>
+        <script type="text/javascript">
+            init();
+        </script>
+       
+    </body>
+</html>

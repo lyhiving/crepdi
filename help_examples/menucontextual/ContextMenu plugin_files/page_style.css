@@ -1,0 +1,46 @@
+html {
+  background-color: #d6e0f5;
+
+}
+
+body {
+  border: 5px solid #ccc;
+  background-color: #fff;
+  padding: 0px 15px;
+  font-family: arial;
+  color: #444;
+  font-size: 13px;
+  width: 640px;
+}
+h2 {
+  margin:25px 0px 5px 0px;
+}
+h3 {
+  margin-bottom: 2px;
+}
+p {
+  padding: 10px;
+  margin: 5px 0px;
+}
+pre {
+  background-color: #eef;
+  border: 1px dashed #ddd;
+  margin-left: 10px;
+
+}
+li {
+}
+span.demo1 {
+  background-color: yellow;
+  margin-right: 20px;
+  padding: 5px;
+}
+table th {
+  text-align: right;
+  vertical-align: top;
+  padding-right: 5px;
+}
+dl {
+  margin-left: 15px;
+}
+dt { font-weight: bold;}

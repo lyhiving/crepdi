@@ -1,0 +1,3 @@
+Canvas :
+
+Se debe trabajar con distintas capas, cada una de ellas tiene que estar con z-index distinto y recordar siempre que si vamos a tener objetos dragables todas las capas de canvas tienen que estar con el z-index negativo, porque sino cuando intentemos arrastrar objetos no podremos porque estaremos pinchando sobre el canvas y no sobre el objeto a mover.

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css" type="text/css">
+        <script src="pizarra.js" type="text/javascript"></script>
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="jquery-ui.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+        $(function()
+        {
+            $( "#draggable" ).draggable();
+            var canvas = document.getElementById("capa1");
+            var contexto  = canvas.getContext("2d");
+            contexto.fillRect(50,10,10,100);
+            var canvas1 = document.getElementById("capa2");
+            var contexto1  = canvas1.getContext("2d");
+            contexto1.fillRect(10,10,10,100);
+            var canvas2 = document.getElementById("capa3");
+            var contexto2  = canvas2.getContext("2d");
+            contexto2.fillRect(90,10,10,100);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="draggable">Drag me around</div>
+        <canvas id="capa1">Deberias de usar un navegador que soporte Canvas. Como por ejemplo Firefox</canvas>
+        <canvas id="capa2">Deberias de usar un navegador que soporte Canvas. Como por ejemplo Firefox</canvas>
+        <canvas id="capa3">Deberias de usar un navegador que soporte Canvas. Como por ejemplo Firefox</canvas>
+    </body>
+</html>

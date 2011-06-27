@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="estilo.css" />
+        <script type="text/javascript" src="../../libraries/jquery-1.5.2.min.js"></script>
+        <script type="text/javascript" src="../../libraries/jquery-ui-1.8.11.custom.min.js"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="menu"><img src="1.png">hola</div>
+        <button id="mostrar">Mostrar</button>
+        <script>
+            var aux = true;
+            $("#mostrar").click(function(){
+                
+                if (aux){
+                    $("div#menu").animate({height: "200px"}, 1500 );
+                    aux = false;}
+                else{
+                    $("div#menu").animate({height: "0"}, 1500 );
+                    aux = true;}
+});
+
+        </script>
+    </body>
+</html>
+
+
+
+
